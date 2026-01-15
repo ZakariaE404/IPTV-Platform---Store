@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamMax IPTV | Unlimited 4K Streaming</title>
+    <meta name="description" content="Get 20,000+ Live Channels and 60,000+ VODs. High quality 4K streaming with StreamMax IPTV.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0f172a',
+                        accentBlue: '#3b82f6',
+                        accentPurple: '#8b5cf6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .gradient-text { background: linear-gradient(90deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .gradient-btn { background: linear-gradient(90deg, #3b82f6, #8b5cf6); transition: all 0.3s ease; }
+        .gradient-btn:hover { opacity: 0.9; transform: translateY(-2px); box-shadow: 0 10px 20px -10px #3b82f6; }
+        .card-hover:hover { transform: translateY(-5px); border-color: #3b82f6; transition: all 0.3s ease; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .faq-active .faq-answer { max-height: 200px; }
+        .faq-active .faq-icon { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gradient-to-tr from-accentBlue to-accentPurple rounded-lg flex items-center justify-center">
+                        <i class="fas fa-play text-white"></i>
+                    </div>
+                    <span class="text-2xl font-extrabold tracking-tight">StreamMax <span class="text-accentBlue">IPTV</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#features" class="hover:text-accentBlue transition">Features</a>
+                    <a href="#pricing" class="hover:text-accentBlue transition">Pricing</a>
+                    <a href="#channels" class="hover:text-accentBlue transition">Channels</a>
+                    <a href="#faq" class="hover:text-accentBlue transition">FAQ</a>
+                    <a href="#contact" class="gradient-btn px-6 py-2.5 rounded-full font-semibold text-sm">Get Free Trial</a>
+                </div>
+
+                <!-- Mobile Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass border-b border-white/10 px-4 py-6 space-y-4">
+            <a href="#features" class="block hover:text-accentBlue">Features</a>
+            <a href="#pricing" class="block hover:text-accentBlue">Pricing</a>
+            <a href="#channels" class="block hover:text-accentBlue">Channels</a>
+            <a href="#faq" class="block hover:text-accentBlue">FAQ</a>
+            <a href="#contact" class="block gradient-btn text-center py-3 rounded-xl font-bold">Get Free Trial</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-40 pb-24 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-accentBlue/20 blur-[120px] rounded-full"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accentPurple/20 blur-[120px] rounded-full"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="inline-block py-1 px-4 rounded-full bg-white/5 border border-white/10 text-accentBlue text-sm font-bold mb-6">
+                🚀 #1 Rated IPTV Provider 2026
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+                Unlimited IPTV Streaming <br> <span class="gradient-text text-6xl md:text-8xl">In 4K Quality</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                Access 20,000+ live channels, 60,000+ movies & series from all over the world. Watch anytime, anywhere on any device.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#pricing" class="gradient-btn px-8 py-4 rounded-xl font-bold text-lg">Start Free Trial</a>
+                <a href="#pricing" class="bg-white/5 hover:bg-white/10 border border-white/10 px-8 py-4 rounded-xl font-bold text-lg transition">View Plans</a>
+            </div>
+            
+            <!-- Trust Badges -->
+            <div class="mt-16 flex flex-wrap justify-center gap-8 opacity-50 grayscale">
+                <div class="flex items-center gap-2"><i class="fas fa-check-circle"></i> No Buffering</div>
+                <div class="flex items-center gap-2"><i class="fas fa-shield-alt"></i> SSL Secured</div>
+                <div class="flex items-center gap-2"><i class="fas fa-bolt"></i> Instant Setup</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="py-24 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose StreamMax?</h2>
+                <p class="text-gray-400">Experience the future of television with our cutting-edge technology.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="glass p-8 rounded-3xl card-hover">
+                    <div class="w-14 h-14 bg-accentBlue/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-tv text-2xl text-accentBlue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">20,000+ Channels</h3>
+                    <p class="text-gray-400">Premium channels from USA, UK, Canada, and 100+ other countries worldwide.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="glass p-8 rounded-3xl card-hover">
+                    <div class="w-14 h-14 bg-accentPurple/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-film text-2xl text-accentPurple"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">60,000+ VOD</h3>
+                    <p class="text-gray-400">The latest movies and series updated weekly in multi-language and 4K quality.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="glass p-8 rounded-3xl card-hover">
+                    <div class="w-14 h-14 bg-green-500/10 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-tachometer-alt text-2xl text-green-500"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">99.9% Uptime</h3>
+                    <p class="text-gray-400">Our powerful anti-freeze technology ensures a smooth streaming experience without buffering.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUPPORTED DEVICES -->
+    <section class="py-20 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-12 text-gray-400 uppercase tracking-widest">Supported Devices</h2>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-70">
+                <div class="space-y-3">
+                    <i class="fas fa-desktop text-4xl"></i>
+                    <p class="font-semibold">PC / Mac</p>
+                </div>
+                <div class="space-y-3">
+                    <i class="fas fa-mobile-alt text-4xl"></i>
+                    <p class="font-semibold">iOS / Android</p>
+                </div>
+                <div class="space-y-3">
+                    <i class="fas fa-tv text-4xl"></i>
+                    <p class="font-semibold">Smart TV</p>
+                </div>
+                <div class="space-y-3">
+                    <i class="fab fa-amazon text-4xl"></i>
+                    <p class="font-semibold">Firestick</p>
+                </div>
+                <div class="space-y-3">
+                    <i class="fas fa-box text-4xl"></i>
+                    <p class="font-semibold">MAG Box</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Affordable Plans</h2>
+                <p class="text-gray-400">Select the plan that fits your needs. No hidden fees.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 items-end">
+                <!-- 1 Month -->
+                <div class="glass p-8 rounded-3xl border border-white/10 hover:border-white/20 transition text-center">
+                    <h3 class="text-xl font-bold mb-2">Basic Plan</h3>
+                    <div class="text-accentBlue text-sm font-bold mb-6">1 MONTH</div>
+                    <div class="text-5xl font-extrabold mb-8">$12</div>
+                    <ul class="text-left space-y-4 mb-8 text-gray-300">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> All 20,000+ Channels</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Movies & Series (VOD)</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> 4K / Ultra HD Quality</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> 24/7 Support</li>
+                    </ul>
+                    <a href="#" class="block w-full py-4 rounded-xl font-bold bg-white/10 hover:bg-white/20 transition">Buy Now</a>
+                </div>
+
+                <!-- 12 Months (Best Value) -->
+                <div class="relative glass p-8 rounded-3xl border-2 border-accentBlue text-center transform md:scale-110 z-10 bg-slate-900 shadow-2xl shadow-accentBlue/20">
+                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-accentBlue text-white px-6 py-1 rounded-full font-bold text-sm uppercase tracking-wider">
+                        Best Value
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Annual Plan</h3>
+                    <div class="text-accentBlue text-sm font-bold mb-6">12 MONTHS</div>
+                    <div class="text-5xl font-extrabold mb-8">$60</div>
+                    <ul class="text-left space-y-4 mb-8 text-gray-300">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> All 20,000+ Channels</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Movies & Series (VOD)</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> 4K / Ultra HD Quality</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Priority 24/7 Support</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Instant Activation</li>
+                    </ul>
+                    <a href="#" class="block w-full py-4 rounded-xl font-bold gradient-btn">Buy Now</a>
+                </div>
+
+                <!-- 3 Months -->
+                <div class="glass p-8 rounded-3xl border border-white/10 hover:border-white/20 transition text-center">
+                    <h3 class="text-xl font-bold mb-2">Standard Plan</h3>
+                    <div class="text-accentBlue text-sm font-bold mb-6">3 MONTHS</div>
+                    <div class="text-5xl font-extrabold mb-8">$25</div>
+                    <ul class="text-left space-y-4 mb-8 text-gray-300">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> All 20,000+ Channels</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Movies & Series (VOD)</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> 4K / Ultra HD Quality</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> 24/7 Support</li>
+                    </ul>
+                    <a href="#" class="block w-full py-4 rounded-xl font-bold bg-white/10 hover:bg-white/20 transition">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHANNEL CATEGORIES -->
+    <section id="channels" class="py-16 bg-slate-900/30">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-10">Premium Content Categories</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="px-6 py-3 glass rounded-full font-semibold border border-white/10"><i class="fas fa-trophy text-orange-500 mr-2"></i> Sports</span>
+                <span class="px-6 py-3 glass rounded-full font-semibold border border-white/10"><i class="fas fa-film text-red-500 mr-2"></i> Movies</span>
+                <span class="px-6 py-3 glass rounded-full font-semibold border border-white/10"><i class="fas fa-mask text-purple-500 mr-2"></i> Entertainment</span>
+                <span class="px-6 py-3 glass rounded-full font-semibold border border-white/10"><i class="fas fa-child text-yellow-500 mr-2"></i> Kids</span>
+                <span class="px-6 py-3 glass rounded-full font-semibold border border-white/10"><i class="fas fa-globe text-blue-500 mr-2"></i> International</span>
+                <span class="px-6 py-3 glass rounded-full font-semibold border border-white/10"><i class="fas fa-newspaper text-green-500 mr-2"></i> News</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16">What Our Users Say</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl italic relative">
+                    <i class="fas fa-quote-left text-3xl text-accentBlue/20 absolute top-6 left-6"></i>
+                    <p class="text-gray-300 mb-6 relative z-10">"Best IPTV service I've ever used. The sports channels are crystal clear with zero lag during live games. Highly recommended!"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-accentBlue rounded-full flex items-center justify-center font-bold">JD</div>
+                        <div>
+                            <h4 class="font-bold">John D.</h4>
+                            <div class="text-yellow-500 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-3xl italic relative">
+                    <i class="fas fa-quote-left text-3xl text-accentBlue/20 absolute top-6 left-6"></i>
+                    <p class="text-gray-300 mb-6 relative z-10">"The movie library is huge! My family loves the kids section, and I love that it works perfectly on my Firestick."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-accentPurple rounded-full flex items-center justify-center font-bold">SM</div>
+                        <div>
+                            <h4 class="font-bold">Sarah M.</h4>
+                            <div class="text-yellow-500 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-3xl italic relative">
+                    <i class="fas fa-quote-left text-3xl text-accentBlue/20 absolute top-6 left-6"></i>
+                    <p class="text-gray-300 mb-6 relative z-10">"Setup was instant. I had my login details within 5 minutes of paying. Great support team too."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center font-bold">AK</div>
+                        <div>
+                            <h4 class="font-bold">Ahmed K.</h4>
+                            <div class="text-yellow-500 text-sm"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-24 bg-slate-900/50">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="faq-item glass rounded-2xl overflow-hidden cursor-pointer p-6">
+                    <div class="flex justify-between items-center">
+                        <h4 class="font-bold">What is IPTV?</h4>
+                        <i class="fas fa-chevron-down faq-icon transition"></i>
+                    </div>
+                    <div class="faq-answer mt-4 text-gray-400">
+                        IPTV (Internet Protocol Television) allows you to stream live television channels and video-on-demand content over your internet connection instead of traditional satellite or cable.
+                    </div>
+                </div>
+                <div class="faq-item glass rounded-2xl overflow-hidden cursor-pointer p-6">
+                    <div class="flex justify-between items-center">
+                        <h4 class="font-bold">Does it work on my device?</h4>
+                        <i class="fas fa-chevron-down faq-icon transition"></i>
+                    </div>
+                    <div class="faq-answer mt-4 text-gray-400">
+                        Yes! Our service works on Smart TVs (Samsung, LG, Sony), Android boxes, Firestick, Apple TV, iOS, Android phones, PC, Mac, and Mag boxes.
+                    </div>
+                </div>
+                <div class="faq-item glass rounded-2xl overflow-hidden cursor-pointer p-6">
+                    <div class="flex justify-between items-center">
+                        <h4 class="font-bold">Do you offer a free trial?</h4>
+                        <i class="fas fa-chevron-down faq-icon transition"></i>
+                    </div>
+                    <div class="faq-answer mt-4 text-gray-400">
+                        Yes, we offer a 24-hour trial so you can test our channel quality and server stability before committing to a full subscription.
+                    </div>
+                </div>
+                <div class="faq-item glass rounded-2xl overflow-hidden cursor-pointer p-6">
+                    <div class="flex justify-between items-center">
+                        <h4 class="font-bold">Is buffering guaranteed free?</h4>
+                        <i class="fas fa-chevron-down faq-icon transition"></i>
+                    </div>
+                    <div class="faq-answer mt-4 text-gray-400">
+                        We use high-bandwidth dedicated servers with anti-freeze technology. As long as you have a stable internet connection (min 15-20 Mbps), you will have a buffering-free experience.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section id="contact" class="py-24 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 text-center glass p-12 rounded-[3rem] border-accentBlue/30 border-2">
+            <h2 class="text-4xl font-extrabold mb-6">Start Watching Today</h2>
+            <p class="text-xl text-gray-300 mb-10">Need help or a trial? Message our 24/7 support team on your favorite platform.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="https://wa.me/yournumber" class="flex items-center justify-center gap-3 bg-[#25D366] px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition">
+                    <i class="fab fa-whatsapp text-2xl"></i> WhatsApp Support
+                </a>
+                <a href="https://t.me/yourusername" class="flex items-center justify-center gap-3 bg-[#0088cc] px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition">
+                    <i class="fab fa-telegram-plane text-2xl"></i> Telegram Channel
+                </a>
+            </div>
+            <p class="mt-8 text-sm text-gray-500">Typical response time: <span class="text-green-400">Under 5 minutes</span></p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-gradient-to-tr from-accentBlue to-accentPurple rounded flex items-center justify-center">
+                            <i class="fas fa-play text-white text-xs"></i>
+                        </div>
+                        <span class="text-xl font-extrabold tracking-tight">StreamMax IPTV</span>
+                    </div>
+                    <p class="text-gray-500 max-w-sm">The world's leading IPTV provider with premium quality streams and dedicated 24/7 customer support.</p>
+                </div>
+                <div class="text-gray-500 text-sm">
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-wider">Disclaimer</h4>
+                    <p>StreamMax IPTV does not host, store or manage any video files or streams on its servers. We only provide a technical interface to access third-party content. All content is copyrighted by their respective owners. Please use our services legally.</p>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-500 text-sm">
+                <p>&copy; 2026 StreamMax IPTV. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const isActive = item.classList.contains('faq-active');
+                
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('faq-active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('faq-active');
+                }
+            });
+        });
+
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                mobileMenu.classList.add('hidden');
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

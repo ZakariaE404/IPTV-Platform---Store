@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamPrime | Premium 4K IPTV Service Provider</title>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#38bdf8', // sky-400
+                        darkNavy: '#0f172a', // slate-900
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+        .faq-item.active .fa-chevron-down {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="bg-primary p-2 rounded-lg">
+                        <i class="fas fa-play text-white"></i>
+                    </div>
+                    <span class="text-2xl font-extrabold tracking-tight text-darkNavy">StreamPrime</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="font-medium hover:text-primary transition">Home</a>
+                    <a href="#features" class="font-medium hover:text-primary transition">Features</a>
+                    <a href="#pricing" class="font-medium hover:text-primary transition">Pricing</a>
+                    <a href="#channels" class="font-medium hover:text-primary transition">Channels</a>
+                    <a href="#faq" class="font-medium hover:text-primary transition">FAQ</a>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="text-darkNavy font-semibold hover:text-primary">Login</a>
+                    <a href="#pricing" class="bg-primary text-white px-6 py-2.5 rounded-full font-bold shadow-lg shadow-sky-200 hover:bg-sky-500 transition">Get Started</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-darkNavy">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 py-6 space-y-4">
+            <a href="#home" class="block font-medium">Home</a>
+            <a href="#features" class="block font-medium">Features</a>
+            <a href="#pricing" class="block font-medium">Pricing</a>
+            <a href="#channels" class="block font-medium">Channels</a>
+            <a href="#faq" class="block font-medium">FAQ</a>
+            <div class="pt-4 flex flex-col gap-3">
+                <a href="#" class="text-center font-bold text-darkNavy">Login</a>
+                <a href="#pricing" class="text-center bg-primary text-white py-3 rounded-xl font-bold">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="text-center lg:text-left">
+                <span class="bg-sky-100 text-primary px-4 py-1.5 rounded-full text-sm font-bold tracking-wide uppercase">Official IPTV Provider 2026</span>
+                <h1 class="mt-6 text-5xl lg:text-7xl font-extrabold text-darkNavy leading-tight">
+                    Premium <span class="text-primary">4K Streaming</span> Without Limits.
+                </h1>
+                <p class="mt-6 text-lg text-slate-500 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                    Access over 22,000+ live channels and 100,000+ VODs instantly. High-speed servers with anti-freeze technology for a seamless viewing experience.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <a href="#pricing" class="bg-primary text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-xl shadow-sky-200 hover:scale-105 transition">Buy Subscription</a>
+                    <a href="#" class="bg-white text-darkNavy border-2 border-slate-200 px-8 py-4 rounded-2xl font-bold text-lg hover:border-primary transition flex items-center justify-center gap-2">
+                        <i class="fas fa-play-circle text-primary"></i> 24h Free Trial
+                    </a>
+                </div>
+                <div class="mt-8 flex items-center justify-center lg:justify-start gap-6 opacity-60">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" class="h-4" alt="Netflix">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Hulu_Logo.svg" class="h-4" alt="Hulu">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Disney%2B_logo.svg" class="h-8" alt="Disney">
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-4 bg-primary/20 rounded-full blur-3xl opacity-30"></div>
+                <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=80&w=1000" class="relative rounded-3xl shadow-2xl border-8 border-white" alt="Streaming Mockup">
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES GRID -->
+    <section id="features" class="py-24 bg-white px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-4xl font-extrabold text-darkNavy">Why Choose StreamPrime?</h2>
+                <p class="mt-4 text-slate-500">We offer the most stable and feature-rich IPTV service in the market.</p>
+            </div>
+            <div class="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition-all duration-300 group border border-slate-100">
+                    <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fas fa-tv text-primary group-hover:text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-darkNavy mb-3">22K+ Channels</h3>
+                    <p class="text-slate-500 leading-relaxed">Premium channels from every country worldwide including sports, movies, and news.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition-all duration-300 group border border-slate-100">
+                    <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fas fa-bolt text-primary group-hover:text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-darkNavy mb-3">Anti-Freeze Tech</h3>
+                    <p class="text-slate-500 leading-relaxed">Advanced 99.9% uptime servers ensure your stream never buffers during big games.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition-all duration-300 group border border-slate-100">
+                    <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fas fa-headset text-primary group-hover:text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-darkNavy mb-3">24/7 Support</h3>
+                    <p class="text-slate-500 leading-relaxed">Our technical team is available around the clock via WhatsApp or Email.</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition-all duration-300 group border border-slate-100">
+                    <div class="w-14 h-14 bg-sky-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <i class="fas fa-mobile-alt text-primary group-hover:text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-darkNavy mb-3">Multi-Device</h3>
+                    <p class="text-slate-500 leading-relaxed">Works perfectly on Smart TV, Firestick, Android Box, iOS, PC, and MAG.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="py-24 px-4 bg-slate-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-darkNavy">Ready to start streaming?</h2>
+                <p class="mt-4 text-slate-500">Pick a plan that works best for you. No hidden fees.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 1 Month -->
+                <div class="bg-white p-10 rounded-[2rem] border border-slate-200 hover:shadow-2xl transition duration-500 flex flex-col">
+                    <h3 class="text-xl font-bold">1 Month Plan</h3>
+                    <div class="mt-6 flex items-baseline">
+                        <span class="text-5xl font-extrabold tracking-tight">$14.99</span>
+                    </div>
+                    <ul class="mt-10 space-y-4 flex-grow">
+                        <li class="flex items-center gap-3 text-slate-600"><i class="fas fa-check text-primary"></i> 22,000+ Channels</li>
+                        <li class="flex items-center gap-3 text-slate-600"><i class="fas fa-check text-primary"></i> 100,000+ VOD</li>
+                        <li class="flex items-center gap-3 text-slate-600"><i class="fas fa-check text-primary"></i> 4K / Ultra HD Quality</li>
+                        <li class="flex items-center gap-3 text-slate-600"><i class="fas fa-check text-primary"></i> 24/7 Support</li>
+                    </ul>
+                    <a href="#" class="mt-10 block w-full text-center py-4 rounded-2xl font-bold bg-slate-100 text-darkNavy hover:bg-primary hover:text-white transition">Choose Plan</a>
+                </div>
+
+                <!-- 12 Months (MOST POPULAR) -->
+                <div class="bg-white p-10 rounded-[2rem] border-4 border-primary shadow-2xl relative transform lg:-translate-y-4 flex flex-col">
+                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-primary text-white px-6 py-1.5 rounded-full text-sm font-bold uppercase tracking-widest">Most Popular</div>
+                    <h3 class="text-xl font-bold">12 Months Plan</h3>
+                    <div class="mt-6 flex items-baseline">
+                        <span class="text-5xl font-extrabold tracking-tight">$64.99</span>
+                        <span class="ml-2 text-slate-400">/year</span>
+                    </div>
+                    <ul class="mt-10 space-y-4 flex-grow">
+                        <li class="flex items-center gap-3 text-slate-600 font-semibold"><i class="fas fa-check text-primary"></i> Everything in Basic</li>
+                        <li class="flex items-center gap-3 text-slate-600 font-semibold"><i class="fas fa-check text-primary"></i> Priority Technical Support</li>
+                        <li class="flex items-center gap-3 text-slate-600 font-semibold"><i class="fas fa-check text-primary"></i> Fast Instant Activation</li>
+                        <li class="flex items-center gap-3 text-slate-600 font-semibold"><i class="fas fa-check text-primary"></i> Anti-Freeze Technology</li>
+                    </ul>
+                    <a href="#" class="mt-10 block w-full text-center py-4 rounded-2xl font-bold bg-primary text-white shadow-lg shadow-sky-200 hover:bg-sky-500 transition">Choose Plan</a>
+                </div>
+
+                <!-- 6 Months -->
+                <div class="bg-white p-10 rounded-[2rem] border border-slate-200 hover:shadow-2xl transition duration-500 flex flex-col">
+                    <h3 class="text-xl font-bold">6 Months Plan</h3>
+                    <div class="mt-6 flex items-baseline">
+                        <span class="text-5xl font-extrabold tracking-tight">$39.99</span>
+                    </div>
+                    <ul class="mt-10 space-y-4 flex-grow">
+                        <li class="flex items-center gap-3 text-slate-600"><i class="fas fa-check text-primary"></i> 22,000+ Channels</li>
+                        <li class="flex items-center gap-3 text-slate-600"><i class="fas fa-check text-primary"></i> 100,000+ VOD</li>
+                        <li class="flex items-center gap-3 text-slate-600"><i class="fas fa-check text-primary"></i> 4K / Ultra HD Quality</li>
+                        <li class="flex items-center gap-3 text-slate-600"><i class="fas fa-check text-primary"></i> 24/7 Support</li>
+                    </ul>
+                    <a href="#" class="mt-10 block w-full text-center py-4 rounded-2xl font-bold bg-slate-100 text-darkNavy hover:bg-primary hover:text-white transition">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHANNELS SECTION -->
+    <section id="channels" class="py-24 bg-white px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl font-extrabold text-darkNavy">Explore Our Content</h2>
+                    <p class="mt-4 text-slate-500">We categorize our channels for easy navigation. From live sports to kids' entertainment, we have it all.</p>
+                </div>
+                <a href="#" class="text-primary font-bold border-b-2 border-primary pb-1">View Full Channel List <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="relative group cursor-pointer overflow-hidden rounded-3xl">
+                    <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" alt="Sports">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkNavy/90 to-transparent flex flex-col justify-end p-6">
+                        <h4 class="text-white text-xl font-bold">Sports</h4>
+                        <p class="text-primary text-sm font-semibold">500+ Channels</p>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer overflow-hidden rounded-3xl">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" alt="Movies">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkNavy/90 to-transparent flex flex-col justify-end p-6">
+                        <h4 class="text-white text-xl font-bold">Movies</h4>
+                        <p class="text-primary text-sm font-semibold">5,000+ Titles</p>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer overflow-hidden rounded-3xl">
+                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" alt="News">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkNavy/90 to-transparent flex flex-col justify-end p-6">
+                        <h4 class="text-white text-xl font-bold">News</h4>
+                        <p class="text-primary text-sm font-semibold">200+ Channels</p>
+                    </div>
+                </div>
+                <div class="relative group cursor-pointer overflow-hidden rounded-3xl">
+                    <img src="https://images.unsplash.com/photo-1533749047139-189de3cf06d3?auto=format&fit=crop&q=80&w=400" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" alt="Kids">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darkNavy/90 to-transparent flex flex-col justify-end p-6">
+                        <h4 class="text-white text-xl font-bold">Kids</h4>
+                        <p class="text-primary text-sm font-semibold">150+ Channels</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-24 bg-slate-50 px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-extrabold text-darkNavy text-center mb-16">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left">
+                        <span class="font-bold text-lg text-darkNavy">How do I install the service?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="pb-6 text-slate-500">Installation depends on your device. We provide detailed M3U playlists and EPG guides. For Smart TVs, you can use apps like IPTV Smarters, Flix IPTV, or TiviMate. We provide step-by-step guides after purchase.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left">
+                        <span class="font-bold text-lg text-darkNavy">What devices are supported?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="pb-6 text-slate-500">Our service works on virtually all devices: Amazon Firestick, Android TV Boxes, Smart TVs (Samsung/LG), iOS (iPhone/iPad), Android Mobile, Windows PC, Mac, and MAG boxes.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden">
+                    <button class="faq-toggle w-full flex items-center justify-between p-6 text-left">
+                        <span class="font-bold text-lg text-darkNavy">Do you offer a refund?</span>
+                        <i class="fas fa-chevron-down text-primary transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6">
+                        <p class="pb-6 text-slate-500">We highly recommend trying our 24h free trial before purchasing. We offer technical support to solve any issues, but please refer to our refund policy page for specific conditions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-darkNavy pt-20 pb-10 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-primary p-2 rounded-lg">
+                            <i class="fas fa-play text-white"></i>
+                        </div>
+                        <span class="text-2xl font-extrabold tracking-tight text-white font-sans">StreamPrime</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">The world's leading premium IPTV provider since 2018. Fast, reliable, and secure streaming for everyone.</p>
+                    <div class="mt-8 flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-white hover:bg-primary transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-white hover:bg-primary transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-white hover:bg-primary transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a href="#home" class="hover:text-primary">Home</a></li>
+                        <li><a href="#features" class="hover:text-primary">Features</a></li>
+                        <li><a href="#pricing" class="hover:text-primary">Pricing</a></li>
+                        <li><a href="#channels" class="hover:text-primary">Channel List</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Support</h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li><a href="#faq" class="hover:text-primary">FAQ</a></li>
+                        <li><a href="#" class="hover:text-primary">Contact Support</a></li>
+                        <li><a href="#" class="hover:text-primary">Setup Guide</a></li>
+                        <li><a href="#" class="hover:text-primary">Free Trial</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6">Payments</h4>
+                    <p class="text-slate-400 mb-6">We accept all major payment methods including crypto.</p>
+                    <div class="flex flex-wrap gap-4 opacity-50">
+                        <i class="fab fa-cc-visa text-3xl text-white"></i>
+                        <i class="fab fa-cc-mastercard text-3xl text-white"></i>
+                        <i class="fab fa-cc-paypal text-3xl text-white"></i>
+                        <i class="fab fa-bitcoin text-3xl text-white"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-white/5 text-center">
+                <p class="text-slate-500 text-sm italic">Disclaimer: StreamPrime does not host any videos on its servers. All streams are provided by third-party providers. We encourage users to follow local regulations.</p>
+                <p class="mt-4 text-slate-500 text-sm font-medium">&copy; 2026 StreamPrime IPTV. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // MOBILE MENU LOGIC
+        const mobileBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // FAQ ACCORDION LOGIC
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const parent = toggle.parentNode;
+                const isActive = parent.classList.contains('active');
+
+                // Close all other FAQs
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Toggle current FAQ
+                if (!isActive) {
+                    parent.classList.add('active');
+                }
+            });
+        });
+
+        // SMOOTH SCROLL OFFSET FOR STICKY NAV
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if(href === '#') return;
+                
+                e.preventDefault();
+                const target = document.querySelector(href);
+                const offset = 80; // height of navbar
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementRect = target.getBoundingClientRect().top;
+                const elementPosition = elementRect - bodyRect;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

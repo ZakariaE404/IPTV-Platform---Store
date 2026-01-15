@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium IPTV - Unlimited 4K Streaming | 20,000+ Channels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/title-logo.png?v=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #0c4a6e 0%, #082f49 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(56, 189, 248, 0.2);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: white;
+            color: black;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+        }
+
+        .pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content.active {
+            max-height: 500px;
+        }
+
+        .pricing-card-best {
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+            transform: scale(1.05);
+        }
+
+        .star-rating {
+            color: #fbbf24;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Navbar scroll effect */
+        .navbar-scrolled {
+            background: rgba(12, 74, 110, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <nav id="navbar" class="fixed w-full z-[100] transition-all duration-500 py-4 px-4 sm:px-6">
+        <div id="nav-container"
+            class="max-w-7xl mx-auto transition-all duration-500 rounded-[2rem] border border-white/5 bg-transparent px-6 lg:px-10">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo Area -->
+                <div class="flex items-center group cursor-pointer" onclick="window.location.href='index.html'">
+                    <div class="relative">
+                        <div
+                            class="absolute inset-0 bg-sky-500/30 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <div
+                            class="relative w-12 h-12 flex items-center justify-center bg-gradient-to-tr from-slate-900 to-slate-800 rounded-full border border-white/10 shadow-2xl">
+                            <img class="w-8 h-8 object-contain rounded-full" src="assets/title-logo.png"
+                                alt="GerTV Logo">
+                        </div>
+                    </div>
+                    <div class="ml-3 flex flex-col">
+                        <span class="text-2xl font-black text-white tracking-tighter leading-none">GER<span
+                                class="text-sky-400">TV</span></span>
+                        <span
+                            class="text-[10px] text-sky-400/60 font-bold uppercase tracking-[0.2em] leading-none mt-1">Premium
+                            IPTV</span>
+                    </div>
+                </div>
+
+                <div
+                    class="hidden md:flex items-center bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-8 py-2.5 space-x-10">
+                    <a href="index.html"
+                        class="relative text-sm font-bold text-white hover:text-sky-400 transition-colors group">Home
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="features.html"
+                        class="relative text-sm font-bold text-white/70 hover:text-sky-400 transition-colors group">Features
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="pricing.html"
+                        class="relative text-sm font-bold text-white/70 hover:text-sky-400 transition-colors group">Pricing
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="channels.html"
+                        class="relative text-sm font-bold text-white/70 hover:text-sky-400 transition-colors group">Channels
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="faq.html"
+                        class="text-sm font-bold text-white/60 hover:text-white transition-colors">Support</a>
+                    <a href="https://wa.me/212713440903" target="_blank"
+                        class="group relative inline-flex items-center gap-2 bg-white text-slate-950 px-6 py-3 rounded-full font-black text-sm shadow-xl hover:scale-105 hover:bg-sky-400 hover:text-white transition-all duration-300">
+                        <i class="fab fa-whatsapp text-lg text-green-500 group-hover:text-white transition-colors"></i>
+                        <span>ORDER NOW</span>
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn"
+                    class="md:hidden w-12 h-12 flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl text-white hover:bg-white/10 transition-all">
+                    <i class="fas fa-bars-staggered text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-drawer" class="fixed inset-0 z-[110] invisible opacity-0 transition-all duration-500">
+
+        <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-2xl"></div>
+
+        <div class="relative h-full flex flex-col items-center justify-center p-8">
+
+            <button id="close-drawer"
+                class="absolute top-10 right-10 w-12 h-12 flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl text-white">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+
+            <div class="flex flex-col items-center space-y-8 text-center">
+                <a href="index.html" class="text-4xl font-black text-white hover:text-sky-400 transition">HOME</a>
+                <a href="features.html"
+                    class="text-4xl font-black text-white/70 hover:text-sky-400 transition">FEATURES</a>
+                <a href="pricing.html"
+                    class="text-4xl font-black text-white/70 hover:text-sky-400 transition">PRICING</a>
+                <a href="channels.html"
+                    class="text-4xl font-black text-white/70 hover:text-sky-400 transition">CHANNELS</a>
+                <a href="faq.html"
+                    class="text-4xl font-black text-white/70 hover:text-sky-400 transition text-sm">SUPPORT</a>
+
+                <div class="pt-8">
+                    <a href="https://wa.me/212713440903"
+                        class="flex items-center gap-4 bg-sky-400 text-white px-10 py-5 rounded-3xl font-black text-xl shadow-2xl shadow-sky-400/20">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        ORDER VIA WHATSAPP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu"
+        class="mobile-menu fixed top-0 right-0 w-full h-full bg-gradient-to-br from-slate-900 to-slate-800 z-40 md:hidden">
+        <div class="flex flex-col p-8 space-y-6 mt-20">
+            <a href="index.html" class="text-white text-xl hover:text-sky-400 transition">Home</a>
+            <a href="pricing.html" class="text-white text-xl hover:text-sky-400 transition">Pricing</a>
+            <a href="channels.html" class="text-white text-xl hover:text-sky-400 transition">Channels</a>
+            <a href="faq.html" class="text-white text-xl hover:text-sky-400 transition">FAQ</a>
+            <div class="pt-6 space-y-4">
+                <a href="pricing.html"
+                    class="block w-full px-6 py-3 text-center border-2 border-sky-400 text-sky-400 rounded-lg font-semibold hover:bg-sky-400 hover:text-white transition">View
+                    Pricing</a>
+                <a href="https://wa.me/1234567890?text=Hi,%20I%20want%20to%20subscribe%20to%20GerTV" target="_blank"
+                    class="flex items-center justify-center space-x-2 w-full btn-primary px-6 py-3 rounded-lg text-white font-semibold">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Order Now</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen flex items-center">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/header-cover.jpg" alt="IPTV Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-900/80"></div>
+        </div>
+
+        <div
+            class="absolute top-20 left-10 w-72 h-72 bg-sky-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse z-0">
+        </div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse z-0"
+            style="animation-delay: 1s;"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10 w-full">
+            <div class="max-w-4xl mx-auto text-center">
+                <div
+                    class="inline-flex items-center space-x-2 bg-sky-400/20 backdrop-blur-sm px-4 py-2 rounded-full mb-8 border border-sky-400/30">
+                    <span class="w-2 h-2 bg-green-400 rounded-full pulse-slow"></span>
+                    <span class="text-sm font-medium text-white">50,000+ Active Subscribers Worldwide</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-3xl md:text-6xl lg:text-5xl font-bold leading-tight mb-6 text-white">
+                    Stream <span class="gradient-text">20,000+ Channels</span><br class="hidden sm:block"> in 4K Quality
+                </h1>
+
+                <p class="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    Premium IPTV with unlimited movies, sports, and entertainment. No contracts. No buffering. Just pure
+                    quality streaming.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="https://wa.me/1234567890?text=Hi,%20I%20want%20to%20subscribe%20to%20GerTV" target="_blank"
+                        class="btn-primary px-10 py-4 rounded-xl text-white font-bold text-lg flex items-center justify-center space-x-2 shadow-2xl">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <span>Order Now on WhatsApp</span>
+                    </a>
+                    <a href="pricing.html"
+                        class="px-10 py-4 rounded-xl text-white font-bold text-lg border-2 border-white/40 hover:bg-white/10 transition flex items-center justify-center space-x-2 backdrop-blur-sm">
+                        <i class="fas fa-tags"></i>
+                        <span>View Pricing</span>
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8 mb-12">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-shield-alt text-sky-400 text-xl"></i>
+                        <span class="text-sm sm:text-base text-white font-medium">Secure Payment</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-clock text-sky-400 text-xl"></i>
+                        <span class="text-sm sm:text-base text-white font-medium">99.9% Uptime</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-headset text-sky-400 text-xl"></i>
+                        <span class="text-sm sm:text-base text-white font-medium">24/7 Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <section class="py-24 bg-slate-950 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="mb-24">
+                <div class="flex items-center justify-between mb-10">
+                    <div>
+                        <h3 class="text-3xl md:text-4xl font-black uppercase tracking-tighter">Champions <span
+                                class="text-sky-400">League Live</span></h3>
+                        <p class="text-slate-400">Don't miss the biggest matches in European football.</p>
+                    </div>
+                </div>
+
+                <div class="swiper sportsSwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/premier-league_.png" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">Premier League</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/laliga.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">La Liga Live</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/bundesliga.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">Bundesliga</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/seriea-italia.webp" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">Serie A</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/worldcup.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">World Cup</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/LIGUE1.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">Ligue 1</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/facup.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">FA Cup</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/europe-league.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">Europa League</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/conference.webp" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">Conference League</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/Asian-Cup-Logo.png" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">Asian Cup</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/mlscup.png" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">MLS Live</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-24">
+                <div class="flex flex-col mb-12 text-center">
+                    <h3 class="text-3xl md:text-5xl font-black uppercase tracking-tighter">Stream <span
+                            class="text-sky-400">60K+ Movies</span> & Series</h3>
+                    <p class="text-slate-400 mt-2">The most popular trending titles updated daily.</p>
+                </div>
+
+                <div class="swiper movieSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide flex items-center pt-20">
+                            <span
+                                class="absolute left-0 text-[10rem] font-black text-white/10 leading-none -z-10 select-none">1</span>
+                            <div
+                                class="relative w-full aspect-[2/3] rounded-[2rem] overflow-hidden border border-white/10 ml-10 shadow-2xl">
+                                <img src="assets/mivies&series/interstellar.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold uppercase tracking-widest">Interstellar</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex items-center pt-20">
+                            <span
+                                class="absolute left-0 text-[10rem] font-black text-white/10 leading-none -z-10 select-none">2</span>
+                            <div
+                                class="relative w-full aspect-[2/3] rounded-[2rem] overflow-hidden border border-white/10 ml-10 shadow-2xl">
+                                <img src="assets/mivies&series/got.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold uppercase tracking-widest">Game Of throanes</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex items-center pt-20">
+                            <span
+                                class="absolute left-0 text-[10rem] font-black text-white/10 leading-none -z-10 select-none">3</span>
+                            <div
+                                class="relative w-full aspect-[2/3] rounded-[2rem] overflow-hidden border border-white/10 ml-10 shadow-2xl">
+                                <img src="assets/mivies&series/fightclub.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold uppercase tracking-widest">Fight Club</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex items-center pt-20">
+                            <span
+                                class="absolute left-0 text-[10rem] font-black text-white/10 leading-none -z-10 select-none">4</span>
+                            <div
+                                class="relative w-full aspect-[2/3] rounded-[2rem] overflow-hidden border border-white/10 ml-10 shadow-2xl">
+                                <img src="assets/mivies&series/breakingbad.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold uppercase tracking-widest">Breaking Bad</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex items-center pt-20">
+                            <span
+                                class="absolute left-0 text-[10rem] font-black text-white/10 leading-none -z-10 select-none">5</span>
+                            <div
+                                class="relative w-full aspect-[2/3] rounded-[2rem] overflow-hidden border border-white/10 ml-10 shadow-2xl">
+                                <img src="assets/mivies&series/lacasa.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold uppercase tracking-widest">Lacasa De Papel</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex items-center pt-20">
+                            <span
+                                class="absolute left-0 text-[10rem] font-black text-white/10 leading-none -z-10 select-none">5</span>
+                            <div
+                                class="relative w-full aspect-[2/3] rounded-[2rem] overflow-hidden border border-white/10 ml-10 shadow-2xl">
+                                <img src="assets/mivies&series/fury.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold uppercase tracking-widest">Fury</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex items-center justify-between mb-10">
+                    <h3 class="text-3xl font-bold uppercase tracking-widest">Top <span class="text-sky-400">HD
+                            Documentaries</span></h3>
+                </div>
+
+                <div class="swiper docuSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/5">
+                                <img src="assets/documentaires/13th.jpg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/5"><img
+                                    src="assets/documentaires/Hoop Dreams.jpeg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/5"><img
+                                    src="assets/documentaires/Man on Wire.webp" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/5"><img
+                                    src="assets/documentaires/Paris Is Burnin.jpg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/5"><img
+                                    src="assets/documentaires/Shoah.jpg" class="w-full h-full object-cover"></div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/5"><img
+                                    src="assets/documentaires/thectofkilling.jpg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiperOptions = {
+            loop: true,
+            grabCursor: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                320: { slidesPerView: 1.5, spaceBetween: 20 },
+                768: { slidesPerView: 3.2, spaceBetween: 30 },
+                1024: { slidesPerView: 4.8, spaceBetween: 40 }
+            }
+        };
+
+        new Swiper('.sportsSwiper', swiperOptions);
+        new Swiper('.movieSwiper', swiperOptions);
+        new Swiper('.docuSwiper', swiperOptions);
+    </script>
+
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+            overflow: visible !important;
+        }
+
+        .swiper-slide {
+            transition: transform 0.3s ease;
+        }
+
+        .swiper-slide:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+    </style>
+
+
+
+    <footer class="bg-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 rounded-lg flex items-center justify-center">
+                            <img class="rounded-full" src=" assets/logo.png" alt="">
+                        </div>
+                        <span class="text-2xl font-bold">Ger<span class="text-sky-400">TV</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Your premium IPTV provider with 20,000+ channels and 80,000+ VOD content in stunning 4K quality.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-sky-400 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-sky-400 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-sky-400 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-sky-400 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-sky-400 transition">Home</a></li>
+                        <li><a href="features.html" class="text-gray-400 hover:text-sky-400 transition">Features</a>
+                        </li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-sky-400 transition">Pricing</a></li>
+                        <li><a href="channels.html" class="text-gray-400 hover:text-sky-400 transition">Channels</a>
+                        </li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-sky-400 transition">FAQ</a></li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-envelope text-sky-400 mt-1"></i>
+                            <span class="text-gray-400"><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                    data-cfemail="12616762627d6066526260777f7b677f66643c717d7f">zakaria-gerTV@gmail.com</a></span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fab fa-whatsapp text-sky-400 mt-1"></i>
+                            <span class="text-gray-400">+2127-1344-0903</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-comments text-sky-400 mt-1"></i>
+                            <span class="text-gray-400">24/7 Live Chat Available</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2026 GerTV. All rights reserved. Premium IPTV Service Provider.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        const navbar = document.getElementById('navbar');
+        const navContainer = document.getElementById('nav-container');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeDrawerBtn = document.getElementById('close-drawer');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+                navContainer.classList.add('bg-slate-950/80', 'backdrop-blur-xl', 'border-white/10', 'shadow-2xl');
+                navContainer.classList.remove('border-white/5');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
+                navContainer.classList.remove('bg-slate-950/80', 'backdrop-blur-xl', 'border-white/10', 'shadow-2xl');
+                navContainer.classList.add('border-white/5');
+            }
+        });
+
+        const openMenu = () => {
+            mobileDrawer.classList.remove('invisible', 'opacity-0');
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeMenu = () => {
+            mobileDrawer.classList.add('invisible', 'opacity-0');
+            document.body.style.overflow = 'auto';
+        };
+
+        mobileMenuBtn.addEventListener('click', openMenu);
+        closeDrawerBtn.addEventListener('click', closeMenu);
+
+        const drawerLinks = mobileDrawer.querySelectorAll('a');
+        drawerLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>

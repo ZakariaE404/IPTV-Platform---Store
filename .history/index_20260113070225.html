@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium IPTV - Unlimited 4K Streaming | 20,000+ Channels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/title-logo.png?v=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #0c4a6e 0%, #082f49 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(56, 189, 248, 0.2);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: white;
+            color: black;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+        }
+
+        .pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content.active {
+            max-height: 500px;
+        }
+
+        .pricing-card-best {
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+            transform: scale(1.05);
+        }
+
+        .star-rating {
+            color: #fbbf24;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Navbar scroll effect */
+        .navbar-scrolled {
+            background: rgba(12, 74, 110, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-[100] transition-all duration-500 py-4 px-4 sm:px-6">
+        <!-- Main Container with Glassmorphism -->
+        <div id="nav-container"
+            class="max-w-7xl mx-auto transition-all duration-500 rounded-[2rem] border border-white/5 bg-transparent px-6 lg:px-10">
+            <div class="flex justify-between items-center h-20">
+
+                <!-- Logo Area -->
+                <div class="flex items-center group cursor-pointer">
+                    <div class="relative">
+                        <!-- Subtle Glow behind logo -->
+                        <div
+                            class="absolute inset-0 bg-sky-500/30 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <div
+                            class="relative w-12 h-12 flex items-center justify-center bg-gradient-to-tr from-slate-900 to-slate-800 rounded-2xl border border-white/10 shadow-2xl">
+                            <img class="w-8 h-8 object-contain" src="assets/logo.png" alt="GerTV Logo">
+                        </div>
+                    </div>
+                    <div class="ml-3 flex flex-col">
+                        <span class="text-2xl font-black text-white tracking-tighter leading-none">GER<span
+                                class="text-sky-400">TV</span></span>
+                        <span
+                            class="text-[10px] text-sky-400/60 font-bold uppercase tracking-[0.2em] leading-none mt-1">Premium
+                            IPTV</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu: Minimalist & Spaced -->
+                <div
+                    class="hidden md:flex items-center bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-8 py-2.5 space-x-10">
+                    <a href="index.html"
+                        class="relative text-sm font-bold text-white hover:text-sky-400 transition-colors group">
+                        Home
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="features.html"
+                        class="relative text-sm font-bold text-white/70 hover:text-sky-400 transition-colors group">
+                        Features
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="pricing.html"
+                        class="relative text-sm font-bold text-white/70 hover:text-sky-400 transition-colors group">
+                        Pricing
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="channels.html"
+                        class="relative text-sm font-bold text-white/70 hover:text-sky-400 transition-colors group">
+                        Channels
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <!-- Action Area -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="faq.html"
+                        class="text-sm font-bold text-white/60 hover:text-white transition-colors">Support</a>
+
+                    <a href="https://wa.me/YOUR_NUMBER" target="_blank"
+                        class="group relative inline-flex items-center gap-2 bg-white text-slate-950 px-6 py-3 rounded-full font-black text-sm shadow-[0_0_20px_rgba(56,189,248,0.2)] hover:scale-105 hover:bg-sky-400 hover:text-white transition-all duration-300">
+                        <i class="fab fa-whatsapp text-lg text-green-500 group-hover:text-white transition-colors"></i>
+                        <span>ORDER NOW</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden w-12 h-12 flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl text-white">
+                    <i class="fas fa-bars-staggered text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="mobile-menu fixed top-0 right-0 w-full h-full bg-gradient-to-br from-slate-900 to-slate-800 z-40 md:hidden">
+        <div class="flex flex-col p-8 space-y-6 mt-20">
+            <a href="index.html" class="text-white text-xl hover:text-sky-400 transition">Home</a>
+            <a href="pricing.html" class="text-white text-xl hover:text-sky-400 transition">Pricing</a>
+            <a href="channels.html" class="text-white text-xl hover:text-sky-400 transition">Channels</a>
+            <a href="faq.html" class="text-white text-xl hover:text-sky-400 transition">FAQ</a>
+            <div class="pt-6 space-y-4">
+                <a href="pricing.html"
+                    class="block w-full px-6 py-3 text-center border-2 border-sky-400 text-sky-400 rounded-lg font-semibold hover:bg-sky-400 hover:text-white transition">View
+                    Pricing</a>
+                <a href="https://wa.me/1234567890?text=Hi,%20I%20want%20to%20subscribe%20to%20GerTV" target="_blank"
+                    class="flex items-center justify-center space-x-2 w-full btn-primary px-6 py-3 rounded-lg text-white font-semibold">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Order Now</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen flex items-center">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="assets/header-cover.jpg" alt="IPTV Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-900/80"></div>
+        </div>
+
+        <!-- Animated Background Elements -->
+        <div
+            class="absolute top-20 left-10 w-72 h-72 bg-sky-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse z-0">
+        </div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse z-0"
+            style="animation-delay: 1s;"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10 w-full">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- Trust Badge -->
+                <div
+                    class="inline-flex items-center space-x-2 bg-sky-400/20 backdrop-blur-sm px-4 py-2 rounded-full mb-8 border border-sky-400/30">
+                    <span class="w-2 h-2 bg-green-400 rounded-full pulse-slow"></span>
+                    <span class="text-sm font-medium text-white">50,000+ Active Subscribers Worldwide</span>
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="text-3xl sm:text-3xl md:text-6xl lg:text-5xl font-bold leading-tight mb-6 text-white">
+                    Stream <span class="gradient-text">20,000+ Channels</span><br class="hidden sm:block"> in 4K Quality
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    Premium IPTV with unlimited movies, sports, and entertainment. No contracts. No buffering. Just pure
+                    quality streaming.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="https://wa.me/1234567890?text=Hi,%20I%20want%20to%20subscribe%20to%20GerTV" target="_blank"
+                        class="btn-primary px-10 py-4 rounded-xl text-white font-bold text-lg flex items-center justify-center space-x-2 shadow-2xl">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <span>Order Now on WhatsApp</span>
+                    </a>
+                    <a href="pricing.html"
+                        class="px-10 py-4 rounded-xl text-white font-bold text-lg border-2 border-white/40 hover:bg-white/10 transition flex items-center justify-center space-x-2 backdrop-blur-sm">
+                        <i class="fas fa-tags"></i>
+                        <span>View Pricing</span>
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8 mb-12">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-shield-alt text-sky-400 text-xl"></i>
+                        <span class="text-sm sm:text-base text-white font-medium">Secure Payment</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-clock text-sky-400 text-xl"></i>
+                        <span class="text-sm sm:text-base text-white font-medium">99.9% Uptime</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-headset text-sky-400 text-xl"></i>
+                        <span class="text-sm sm:text-base text-white font-medium">24/7 Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <!-- Why Choose Us Section -->
+    <section class="py-24 bg-slate-950 overflow-hidden" id="features">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="text-sky-400 font-bold tracking-widest uppercase text-sm mb-3">The Premium Standard</h2>
+                    <h3 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+                        Why settle for less when you can <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">have it
+                            all?</span>
+                    </h3>
+                </div>
+                <p class="text-slate-400 text-lg max-w-sm">
+                    We've invested in elite server infrastructure to ensure your entertainment is never interrupted.
+                </p>
+            </div>
+
+            <!-- Bento Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[280px] md:auto-rows-[320px]">
+
+                <!-- Big Feature: Live Channels (Spans 8 columns) -->
+                <div class="md:col-span-8 relative group overflow-hidden rounded-[2.5rem] border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1504450758481-7338eba7524a?auto=format&fit=crop&q=80&w=1200"
+                        class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                        alt="Live Sports">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+
+                    <div class="absolute bottom-0 left-0 p-8 md:p-12">
+                        <div
+                            class="inline-flex items-center gap-2 bg-sky-500 text-white px-3 py-1 rounded-full text-xs font-bold mb-4 uppercase tracking-tighter">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                            </span>
+                            Live Now
+                        </div>
+                        <h4 class="text-3xl md:text-4xl font-bold text-white mb-2">20,000+ Global Channels</h4>
+                        <p class="text-slate-300 max-w-md">Stream every major sports league, international news, and
+                            premium cable networks in real-time.</p>
+                    </div>
+                </div>
+
+                <!-- Small Feature: 4K Quality (Spans 4 columns) -->
+                <div
+                    class="md:col-span-4 relative group overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=800"
+                        class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-700"
+                        alt="4K Visuals">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent"></div>
+
+                    <div class="absolute inset-0 flex flex-col justify-end p-8">
+                        <i class="fas fa-compact-disc text-sky-400 text-3xl mb-4"></i>
+                        <h4 class="text-2xl font-bold text-white mb-2">Ultra HD 4K</h4>
+                        <p class="text-slate-300 text-sm">Crystal clear 60FPS streaming that makes you feel like you're
+                            in the stadium.</p>
+                    </div>
+                </div>
+
+                <!-- Small Feature: Multi-Device (Spans 4 columns) -->
+                <div
+                    class="md:col-span-4 relative group overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=80&w=800"
+                        class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition duration-700"
+                        alt="Devices">
+
+                    <div class="absolute inset-0 flex flex-col justify-end p-8">
+                        <i class="fas fa-mobile-screen-button text-sky-400 text-3xl mb-4"></i>
+                        <h4 class="text-2xl font-bold text-white mb-2">Any Device</h4>
+                        <p class="text-slate-300 text-sm">From your 85" Smart TV to your smartphone on the train.</p>
+                    </div>
+                </div>
+
+                <!-- Big Feature: VOD Library (Spans 8 columns) -->
+                <div class="md:col-span-8 relative group overflow-hidden rounded-[2.5rem] border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=1200"
+                        class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                        alt="Movies">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+
+                    <div class="absolute bottom-0 left-0 p-8 md:p-12">
+                        <h4 class="text-3xl md:text-4xl font-bold text-white mb-2">80,000+ VOD Library</h4>
+                        <p class="text-slate-300 max-w-md">Every movie, every series, every season. Updated daily with
+                            the latest Hollywood blockbusters.</p>
+                        <div class="flex gap-4 mt-6">
+                            <span class="text-white/60 text-xs px-3 py-1 bg-white/10 rounded-full">Netflix</span>
+                            <span class="text-white/60 text-xs px-3 py-1 bg-white/10 rounded-full">HBO Max</span>
+                            <span class="text-white/60 text-xs px-3 py-1 bg-white/10 rounded-full">Disney+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Stats (Strong Design Add-on) -->
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-y border-white/10">
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-extrabold text-white mb-2">99.9%</div>
+                    <div class="text-sky-400 font-bold uppercase text-xs tracking-widest">Server Uptime</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-extrabold text-white mb-2">24/7</div>
+                    <div class="text-sky-400 font-bold uppercase text-xs tracking-widest">Live Support</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-extrabold text-white mb-2">15M</div>
+                    <div class="text-sky-400 font-bold uppercase text-xs tracking-widest">VOD Minutes</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-extrabold text-white mb-2">0</div>
+                    <div class="text-sky-400 font-bold uppercase text-xs tracking-widest">Buffering Issues</div>
+                </div>
+            </div>
+
+            <!-- High-Converting CTA Box -->
+            <!-- Final High-Converting CTA Section -->
+            <div
+                class="mt-24 relative overflow-hidden rounded-[3rem] min-h-[500px] flex items-center justify-center shadow-2xl shadow-sky-500/20">
+
+                <!-- Background Image: Modern Home Cinema Setup -->
+                <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?q=80&w=2070&auto=format&fit=crop"
+                    alt="Premium Streaming Experience" class="absolute inset-0 w-full h-full object-cover">
+
+                <!-- Dark Cinematic Overlay (Gradient from dark to slightly transparent) -->
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-900/40"></div>
+
+                <!-- Decorative Glow Element -->
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-sky-500/20 rounded-full blur-[100px]"></div>
+                <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]"></div>
+
+                <!-- Content Container -->
+                <div class="relative z-10 px-8 py-16 md:px-20 md:py-24 text-center">
+
+                    <!-- Trust Badge -->
+                    <div
+                        class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full mb-8">
+                        <span class="flex h-2 w-2 rounded-full bg-green-400"></span>
+                        <span class="text-white text-xs font-bold uppercase tracking-widest">Instant Activation
+                            Available</span>
+                    </div>
+
+                    <h4 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight tracking-tight">
+                        Stop paying for 10 different <br class="hidden md:block">
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">subscriptions.</span>
+                    </h4>
+
+                    <p class="text-slate-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                        Join <span class="text-white font-bold">15,000+ happy viewers</span> who saved an average of
+                        <span class="text-sky-400 font-bold">$1,200/year</span> by switching to our all-in-one premium
+                        service.
+                    </p>
+
+                    <!-- Main Button with Glow Effect -->
+                    <div class="flex flex-col items-center gap-6">
+                        <a href="https://wa.me/212713440903"
+                            class="group relative inline-flex items-center gap-4 bg-white text-slate-950 px-12 py-6 rounded-2xl font-black text-xl shadow-[0_0_40px_rgba(56,189,248,0.3)] hover:scale-105 hover:bg-gradient-to-r hover:from-sky-400 hover:to-blue-400 hover:text-black transition-all duration-300">
+                            <i
+                                class="fab fa-whatsapp text-2xl text-green-500 group-hover:text-white transition-colors duration-300"></i>
+
+                            Order Now
+
+                            <i
+                                class="fas fa-chevron-right text-sm group-hover:translate-x-1 group-hover:text-white transition-all duration-300"></i>
+                        </a>
+
+                        <div
+                            class="flex flex-wrap items-center justify-center gap-6 text-slate-400 text-sm font-medium">
+                            <span class="flex items-center gap-2">
+                                <i class="fas fa-shield-check text-sky-400"></i> 7-Day Money Back Guarantee
+                            </span>
+                            <span class="hidden md:block w-1.5 h-1.5 bg-slate-700 rounded-full"></span>
+                            <span class="flex items-center gap-2">
+                                <i class="fas fa-bolt text-sky-400"></i> Setup in 5 Minutes
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 rounded-lg flex items-center justify-center">
+                            <img class="rounded-full" src=" assets/logo.png" alt="">
+                        </div>
+                        <span class="text-2xl font-bold">Ger<span class="text-sky-400">TV</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Your premium IPTV provider with 20,000+ channels and 80,000+ VOD content in stunning 4K quality.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-sky-400 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-sky-400 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-sky-400 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-sky-400 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-sky-400 transition">Home</a></li>
+                        <li><a href="features.html" class="text-gray-400 hover:text-sky-400 transition">Features</a>
+                        </li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-sky-400 transition">Pricing</a></li>
+                        <li><a href="channels.html" class="text-gray-400 hover:text-sky-400 transition">Channels</a>
+                        </li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-sky-400 transition">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Support</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-sky-400 transition">Setup Guide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-sky-400 transition">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-sky-400 transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-sky-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-sky-400 transition">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-envelope text-sky-400 mt-1"></i>
+                            <span class="text-gray-400"><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                    data-cfemail="12616762627d6066526260777f7b677f66643c717d7f">zakaria-gerTV@gmail.com</a></span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fab fa-whatsapp text-sky-400 mt-1"></i>
+                            <span class="text-gray-400">+2127-1344-0903</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-comments text-sky-400 mt-1"></i>
+                            <span class="text-gray-400">24/7 Live Chat Available</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2026 GerTV. All rights reserved. Premium IPTV Service Provider.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        const navbar = document.getElementById('navbar');
+        const navContainer = document.getElementById('nav-container');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                // Scrolled State: Compact, Blurred, and Bordered
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+                navContainer.classList.add('bg-slate-950/80', 'backdrop-blur-xl', 'border-white/10', 'shadow-2xl');
+                navContainer.classList.remove('border-white/5');
+            } else {
+                // Top State: Spacious and Transparent
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
+                navContainer.classList.remove('bg-slate-950/80', 'backdrop-blur-xl', 'border-white/10', 'shadow-2xl');
+                navContainer.classList.add('border-white/5');
+            }
+        });
+        // FAQ Accordion
+        const accordionBtns = document.querySelectorAll('.accordion-btn');
+
+        accordionBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+
+                // Close all other accordions
+                accordionBtns.forEach(otherBtn => {
+                    if (otherBtn !== btn) {
+                        otherBtn.nextElementSibling.classList.remove('active');
+                        otherBtn.querySelector('i').style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // Toggle current accordion
+                content.classList.toggle('active');
+                if (content.classList.contains('active')) {
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+        // Smooth Scroll for CTA buttons
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-hover').forEach(card => {
+            observer.observe(card);
+        });
+    </script>

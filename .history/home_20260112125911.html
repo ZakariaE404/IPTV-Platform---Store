@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamMax IPTV | Premium 4K Entertainment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0a0f1d',
+                            800: '#111827',
+                            700: '#161e2d',
+                        },
+                        sky: {
+                            400: '#38bdf8',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0f1d;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .sky-glow {
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+        }
+
+        .page-transition {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .hidden-page {
+            display: none;
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        .active-page {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .nav-link.active {
+            color: #38bdf8;
+            position: relative;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #38bdf8;
+            border-radius: 2px;
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.15), transparent);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 glass border-b border-white/5 top-0">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="navigateTo('home')">
+                    <span class="text-2xl font-extrabold tracking-tighter italic">STREAM<span
+                            class="text-sky-400">MAX</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-10 items-center">
+                    <a href="javascript:void(0)" onclick="navigateTo('home')"
+                        class="nav-link active font-medium hover:text-sky-400 transition text-sm">Home</a>
+                    <a href="javascript:void(0)" onclick="navigateTo('features')"
+                        class="nav-link font-medium hover:text-sky-400 transition text-sm">Features</a>
+                    <a href="javascript:void(0)" onclick="navigateTo('pricing')"
+                        class="nav-link font-medium hover:text-sky-400 transition text-sm">Pricing</a>
+                    <a href="javascript:void(0)" onclick="navigateTo('channels')"
+                        class="nav-link font-medium hover:text-sky-400 transition text-sm">Channels</a>
+                    <a href="javascript:void(0)" onclick="navigateTo('faq')"
+                        class="nav-link font-medium hover:text-sky-400 transition text-sm">FAQ</a>
+                    <a href="javascript:void(0)" onclick="navigateTo('pricing')"
+                        class="bg-sky-400 hover:bg-sky-500 text-navy-900 px-6 py-2.5 rounded-full font-bold text-sm transition-all sky-glow">Free
+                        Trial</a>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button class="md:hidden text-white" id="mobileMenuBtn">
+                    <i class="fas fa-bars-staggered text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div id="mobileOverlay"
+        class="fixed inset-0 bg-navy-900 z-[60] hidden flex-col items-center justify-center space-y-8 text-2xl font-bold">
+        <button class="absolute top-8 right-8 text-white" id="closeMenuBtn"><i class="fas fa-times"></i></button>
+        <a href="javascript:void(0)" onclick="navigateTo('home')" class="hover:text-sky-400">Home</a>
+        <a href="javascript:void(0)" onclick="navigateTo('features')" class="hover:text-sky-400">Features</a>
+        <a href="javascript:void(0)" onclick="navigateTo('pricing')" class="hover:text-sky-400">Pricing</a>
+        <a href="javascript:void(0)" onclick="navigateTo('channels')" class="hover:text-sky-400">Channels</a>
+        <a href="javascript:void(0)" onclick="navigateTo('faq')" class="hover:text-sky-400">FAQ</a>
+    </div>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="pt-20">
+
+        <!-- PAGE: HOME -->
+        <section id="home" class="page-transition active-page">
+            <!-- HERO -->
+            <div class="relative min-h-[90vh] flex items-center justify-center hero-gradient overflow-hidden">
+                <div class="max-w-7xl mx-auto px-6 py-20 text-center relative z-10">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 animate-bounce">
+                        <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                        <span class="text-xs font-bold tracking-widest uppercase">Server Status: Online</span>
+                    </div>
+                    <h1 class="text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-tight">
+                        The Future of <br><span class="text-sky-400">4K Streaming</span> is Here.
+                    </h1>
+                    <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-medium">
+                        Access over 22,000+ Premium Channels and 120,000+ Movies & Series. Pure quality, zero buffering,
+                        anywhere in the world.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-6">
+                        <button onclick="navigateTo('pricing')"
+                            class="bg-sky-400 hover:bg-sky-500 text-navy-900 px-10 py-5 rounded-2xl font-extrabold text-lg transition-all sky-glow">
+                            START FREE TRIAL
+                        </button>
+                        <button onclick="navigateTo('pricing')"
+                            class="glass hover:bg-white/10 text-white px-10 py-5 rounded-2xl font-extrabold text-lg transition-all">
+                            VIEW PLANS
+                        </button>
+                    </div>
+
+                    <div
+                        class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-40 grayscale hover:grayscale-0 transition-all">
+                        <div class="flex items-center justify-center gap-2 font-bold"><i
+                                class="fas fa-shield-halved text-2xl"></i> SECURE</div>
+                        <div class="flex items-center justify-center gap-2 font-bold"><i
+                                class="fas fa-bolt text-2xl"></i> INSTANT</div>
+                        <div class="flex items-center justify-center gap-2 font-bold"><i class="fas fa-tv text-2xl"></i>
+                            UHD/4K</div>
+                        <div class="flex items-center justify-center gap-2 font-bold"><i
+                                class="fas fa-headset text-2xl"></i> 24/7 Support</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PREVIEW SECTIONS (Summary Cards) -->
+            <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-8">
+                <!-- Features Card -->
+                <div class="glass p-10 rounded-[2.5rem] group hover:border-sky-400/30 transition-all cursor-pointer"
+                    onclick="navigateTo('features')">
+                    <div
+                        class="w-14 h-14 bg-sky-400/10 rounded-2xl flex items-center justify-center mb-6 text-sky-400 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-rocket text-2xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">Elite Features</h3>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Discover why 50,000+ customers trust StreamMax. From
+                        Anti-Freeze technology to Multi-Device support.</p>
+                    <span class="text-sky-400 font-bold flex items-center gap-2 uppercase tracking-widest text-sm">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </span>
+                </div>
+
+                <!-- Pricing Card -->
+                <div class="glass p-10 rounded-[2.5rem] group hover:border-sky-400/30 transition-all cursor-pointer"
+                    onclick="navigateTo('pricing')">
+                    <div
+                        class="w-14 h-14 bg-sky-400/10 rounded-2xl flex items-center justify-center mb-6 text-sky-400 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-tag text-2xl"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">Flexible Plans</h3>
+                    <p class="text-slate-400 mb-8 leading-relaxed">Choose the perfect plan for your lifestyle. Starting
+                        from just $12. No commitments, cancel anytime.</p>
+                    <span class="text-sky-400 font-bold flex items-center gap-2 uppercase tracking-widest text-sm">
+                        View Pricing <i class="fas fa-arrow-right"></i>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE: FEATURES -->
+        <section id="features" class="page-transition hidden-page py-20">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Premium <span
+                            class="text-sky-400">Capability</span></h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">We've spent years optimizing our servers to provide the
+                        most stable IPTV experience on the market.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="glass p-8 rounded-3xl">
+                        <i class="fas fa-microchip text-sky-400 text-3xl mb-6"></i>
+                        <h4 class="text-xl font-bold mb-3">Anti-Freeze 10.0</h4>
+                        <p class="text-slate-400 text-sm">Our proprietary technology eliminates buffering even on
+                            low-speed connections.</p>
+                    </div>
+                    <div class="glass p-8 rounded-3xl">
+                        <i class="fas fa-globe text-sky-400 text-3xl mb-6"></i>
+                        <h4 class="text-xl font-bold mb-3">Global Channels</h4>
+                        <p class="text-slate-400 text-sm">22k+ channels from every continent. US, UK, CA, Europe, and
+                            Asia included.</p>
+                    </div>
+                    <div class="glass p-8 rounded-3xl">
+                        <i class="fas fa-layer-group text-sky-400 text-3xl mb-6"></i>
+                        <h4 class="text-xl font-bold mb-3">Massive VOD</h4>
+                        <p class="text-slate-400 text-sm">120k+ Movies and Series with daily updates. Netflix, Disney+,
+                            and HBO originals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE: PRICING -->
+        <section id="pricing" class="page-transition hidden-page py-20">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-6xl font-extrabold mb-4">Select Your <span
+                            class="text-sky-400">Plan</span></h2>
+                    <p class="text-slate-400">All plans include the full channel list and 24/7 support.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 items-center">
+                    <!-- 1 Month -->
+                    <div class="glass p-10 rounded-[2.5rem] border-white/5">
+                        <h3 class="text-2xl font-bold mb-6">Standard</h3>
+                        <div class="text-5xl font-extrabold mb-8">$12 <span
+                                class="text-lg font-normal text-slate-500">/mo</span></div>
+                        <ul class="space-y-4 mb-10 text-slate-300">
+                            <li><i class="fas fa-check text-sky-400 mr-2"></i> 22k+ Live Channels</li>
+                            <li><i class="fas fa-check text-sky-400 mr-2"></i> 120k+ VOD Content</li>
+                            <li><i class="fas fa-check text-sky-400 mr-2"></i> 4K / UHD / FHD</li>
+                            <li><i class="fas fa-check text-sky-400 mr-2"></i> 1 Connection</li>
+                        </ul>
+                        <button
+                            class="w-full py-4 rounded-2xl bg-white/5 hover:bg-white/10 font-bold transition-all border border-white/10">Get
+                            Started</button>
+                    </div>
+                    <!-- 12 Months -->
+                    <div class="glass p-12 rounded-[2.5rem] border-sky-400/50 relative sky-glow bg-navy-800 scale-105">
+                        <div
+                            class="absolute -top-5 left-1/2 -translate-x-1/2 bg-sky-400 text-navy-900 px-6 py-1 rounded-full text-sm font-black uppercase">
+                            Best Value</div>
+                        <h3 class="text-2xl font-bold mb-6">Annual Elite</h3>
+                        <div class="text-5xl font-extrabold mb-8">$65 <span
+                                class="text-lg font-normal text-slate-500">/yr</span></div>
+                        <ul class="space-y-4 mb-10 text-slate-300">
+                            <li><i class="fas fa-check text-sky-400 mr-2"></i> Everything in Standard</li>
+                            <li><i class="fas fa-check text-sky-400 mr-2"></i> 24/7 Priority Support</li>
+                            <li><i class="fas fa-check text-sky-400 mr-2"></i> Adult Channels (Optional)</li>
+                            <li><i class="fas fa-check text-sky-400 mr-2"></i> Anti-Freeze 10.0</li>
+                        </ul>
+                        <button
+                            class="w-full py-4 rounded-2xl bg-sky-400 hover:bg-sky-500 text-navy-900 font-bold transition-all shadow-xl">Get
+                            Started Now</button>
+                    </div>
+                    <!-- 6 Months -->
+                    <div class="glass p-10 rounded-[2.5rem] border-white/5">
+                        <h3 class="text-2xl font-bold mb-6">Premium</h3>
+                        <div class="text-5xl font-extrabold mb-8">$35 <span
+                                class="text-lg font-normal text-slate-500">/6mo</span></div>
+                        <ul class="space-y-4 mb-10 text-slate-300">
+                            <li><i class="fas fa-check text-sky-400 mr-2"></i> All Live Channels</li>
+                            <li><i class="fas fa-check text-sky-400 mr-2"></i> Full VOD Library</li>
+                            <li><i class="fas fa-check text-sky-400 mr-2"></i> Multi-Device Support</li>
+                            <li><i class="fas fa-check text-sky-400 mr-2"></i> Catch-up Feature</li>
+                        </ul>
+                        <button
+                            class="w-full py-4 rounded-2xl bg-white/5 hover:bg-white/10 font-bold transition-all border border-white/10">Get
+                            Started</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE: CHANNELS -->
+        <section id="channels" class="page-transition hidden-page py-20">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-4xl font-extrabold text-center mb-12">Channel <span
+                        class="text-sky-400">Categories</span></h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="glass p-6 rounded-2xl text-center hover:border-sky-400 transition-all cursor-default">
+                        <i class="fas fa-trophy text-3xl mb-4 text-sky-400"></i>
+                        <h5 class="font-bold">Sports Packages</h5>
+                    </div>
+                    <div class="glass p-6 rounded-2xl text-center hover:border-sky-400 transition-all cursor-default">
+                        <i class="fas fa-film text-3xl mb-4 text-sky-400"></i>
+                        <h5 class="font-bold">Cinema & VOD</h5>
+                    </div>
+                    <div class="glass p-6 rounded-2xl text-center hover:border-sky-400 transition-all cursor-default">
+                        <i class="fas fa-flag-usa text-3xl mb-4 text-sky-400"></i>
+                        <h5 class="font-bold">USA Premium</h5>
+                    </div>
+                    <div class="glass p-6 rounded-2xl text-center hover:border-sky-400 transition-all cursor-default">
+                        <i class="fas fa-baby text-3xl mb-4 text-sky-400"></i>
+                        <h5 class="font-bold">Kids Entertainment</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE: FAQ -->
+        <section id="faq" class="page-transition hidden-page py-20">
+            <div class="max-w-3xl mx-auto px-6">
+                <h2 class="text-4xl font-extrabold text-center mb-12">Common <span class="text-sky-400">Questions</span>
+                </h2>
+                <div class="space-y-4">
+                    <div class="glass p-6 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center font-bold">
+                            <span>How long does activation take?</span>
+                            <i class="fas fa-chevron-down text-sky-400"></i>
+                        </div>
+                        <p class="mt-4 text-slate-400 hidden">Activation is typically instant after payment, but can
+                            take up to 30 minutes during peak times.</p>
+                    </div>
+                    <div class="glass p-6 rounded-2xl cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center font-bold">
+                            <span>Which devices are supported?</span>
+                            <i class="fas fa-chevron-down text-sky-400"></i>
+                        </div>
+                        <p class="mt-4 text-slate-400 hidden">We support all Smart TVs, Android devices, Firestick,
+                            Apple TV, MAG, and PC/Mac via VLC or Web Player.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-20 border-t border-white/5 py-12 glass">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-2xl font-extrabold tracking-tighter">STREAM<span class="text-sky-400">MAX</span></div>
+            <div class="flex gap-8 text-sm text-slate-400">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Terms of Service</a>
+                <a href="#" class="hover:text-white">Refund Policy</a>
+            </div>
+            <p class="text-xs text-slate-500">&copy; 2026 StreamMax IPTV. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- NAVIGATION LOGIC -->
+    <script>
+        // Page Navigation System
+        function navigateTo(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page-transition').forEach(page => {
+                page.classList.remove('active-page');
+                page.classList.add('hidden-page');
+            });
+
+            // Show target page
+            const targetPage = document.getElementById(pageId);
+            targetPage.classList.remove('hidden-page');
+            setTimeout(() => targetPage.classList.add('active-page'), 50);
+
+            // Update Nav Links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.innerText.toLowerCase() === pageId) link.classList.add('active');
+            });
+
+            // Reset Scroll
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // Close mobile menu
+            document.getElementById('mobileOverlay').classList.add('hidden');
+        }
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const p = element.querySelector('p');
+            const icon = element.querySelector('i');
+            p.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Mobile Menu
+        const mbBtn = document.getElementById('mobileMenuBtn');
+        const closeBtn = document.getElementById('closeMenuBtn');
+        const overlay = document.getElementById('mobileOverlay');
+
+        mbBtn.onclick = () => overlay.classList.remove('hidden');
+        closeBtn.onclick = () => overlay.classList.add('hidden');
+    </script>
+
+</body>
+
+</html>

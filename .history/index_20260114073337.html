@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium IPTV - Unlimited 4K Streaming | 20,000+ Channels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/title-logo.png?v=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #0c4a6e 0%, #082f49 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(56, 189, 248, 0.2);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: white;
+            color: black;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+        }
+
+        .pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-content.active {
+            max-height: 500px;
+        }
+
+        .pricing-card-best {
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+            transform: scale(1.05);
+        }
+
+        .star-rating {
+            color: #fbbf24;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Navbar scroll effect */
+        .navbar-scrolled {
+            background: rgba(12, 74, 110, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+
+    <nav id="navbar" class="fixed w-full z-[100] transition-all duration-500 py-4 px-4 sm:px-6">
+        <div id="nav-container"
+            class="max-w-7xl mx-auto transition-all duration-500 rounded-[2rem] border border-white/5 bg-transparent px-6 lg:px-10">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo Area -->
+                <div class="flex items-center group cursor-pointer" onclick="window.location.href='index.html'">
+                    <div class="relative">
+                        <div
+                            class="absolute inset-0 bg-sky-500/30 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <div
+                            class="relative w-12 h-12 flex items-center justify-center bg-gradient-to-tr from-slate-900 to-slate-800 rounded-full border border-white/10 shadow-2xl">
+                            <img class="w-8 h-8 object-contain rounded-full" src="assets/title-logo.png"
+                                alt="GerTV Logo">
+                        </div>
+                    </div>
+                    <div class="ml-3 flex flex-col">
+                        <span class="text-2xl font-black text-white tracking-tighter leading-none">GER<span
+                                class="text-sky-400">TV</span></span>
+                        <span
+                            class="text-[10px] text-sky-400/60 font-bold uppercase tracking-[0.2em] leading-none mt-1">Premium
+                            IPTV</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div
+                    class="hidden md:flex items-center bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-8 py-2.5 space-x-10">
+                    <a href="index.html"
+                        class="relative text-sm font-bold text-white hover:text-sky-400 transition-colors group">Home
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="features.html"
+                        class="relative text-sm font-bold text-white/70 hover:text-sky-400 transition-colors group">Features
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="pricing.html"
+                        class="relative text-sm font-bold text-white/70 hover:text-sky-400 transition-colors group">Pricing
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="channels.html"
+                        class="relative text-sm font-bold text-white/70 hover:text-sky-400 transition-colors group">Channels
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <!-- Action Area -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="faq.html"
+                        class="text-sm font-bold text-white/60 hover:text-white transition-colors">Support</a>
+                    <a href="https://wa.me/YOUR_NUMBER" target="_blank"
+                        class="group relative inline-flex items-center gap-2 bg-white text-slate-950 px-6 py-3 rounded-full font-black text-sm shadow-xl hover:scale-105 hover:bg-sky-400 hover:text-white transition-all duration-300">
+                        <i class="fab fa-whatsapp text-lg text-green-500 group-hover:text-white transition-colors"></i>
+                        <span>ORDER NOW</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle Button -->
+                <button id="mobile-menu-btn"
+                    class="md:hidden w-12 h-12 flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl text-white hover:bg-white/10 transition-all">
+                    <i class="fas fa-bars-staggered text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-drawer" class="fixed inset-0 z-[110] invisible opacity-0 transition-all duration-500">
+
+        <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-2xl"></div>
+
+        <div class="relative h-full flex flex-col items-center justify-center p-8">
+
+            <button id="close-drawer"
+                class="absolute top-10 right-10 w-12 h-12 flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl text-white">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+
+            <div class="flex flex-col items-center space-y-8 text-center">
+                <a href="index.html" class="text-4xl font-black text-white hover:text-sky-400 transition">HOME</a>
+                <a href="features.html"
+                    class="text-4xl font-black text-white/70 hover:text-sky-400 transition">FEATURES</a>
+                <a href="pricing.html"
+                    class="text-4xl font-black text-white/70 hover:text-sky-400 transition">PRICING</a>
+                <a href="channels.html"
+                    class="text-4xl font-black text-white/70 hover:text-sky-400 transition">CHANNELS</a>
+                <a href="faq.html"
+                    class="text-4xl font-black text-white/70 hover:text-sky-400 transition text-sm">SUPPORT</a>
+
+                <div class="pt-8">
+                    <a href="https://wa.me/YOUR_NUMBER"
+                        class="flex items-center gap-4 bg-sky-400 text-white px-10 py-5 rounded-3xl font-black text-xl shadow-2xl shadow-sky-400/20">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        ORDER VIA WHATSAPP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu"
+        class="mobile-menu fixed top-0 right-0 w-full h-full bg-gradient-to-br from-slate-900 to-slate-800 z-40 md:hidden">
+        <div class="flex flex-col p-8 space-y-6 mt-20">
+            <a href="index.html" class="text-white text-xl hover:text-sky-400 transition">Home</a>
+            <a href="pricing.html" class="text-white text-xl hover:text-sky-400 transition">Pricing</a>
+            <a href="channels.html" class="text-white text-xl hover:text-sky-400 transition">Channels</a>
+            <a href="faq.html" class="text-white text-xl hover:text-sky-400 transition">FAQ</a>
+            <div class="pt-6 space-y-4">
+                <a href="pricing.html"
+                    class="block w-full px-6 py-3 text-center border-2 border-sky-400 text-sky-400 rounded-lg font-semibold hover:bg-sky-400 hover:text-white transition">View
+                    Pricing</a>
+                <a href="https://wa.me/1234567890?text=Hi,%20I%20want%20to%20subscribe%20to%20GerTV" target="_blank"
+                    class="flex items-center justify-center space-x-2 w-full btn-primary px-6 py-3 rounded-lg text-white font-semibold">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Order Now</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen flex items-center">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/header-cover.jpg" alt="IPTV Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/90 to-slate-900/80"></div>
+        </div>
+
+        <div
+            class="absolute top-20 left-10 w-72 h-72 bg-sky-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse z-0">
+        </div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse z-0"
+            style="animation-delay: 1s;"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10 w-full">
+            <div class="max-w-4xl mx-auto text-center">
+                <div
+                    class="inline-flex items-center space-x-2 bg-sky-400/20 backdrop-blur-sm px-4 py-2 rounded-full mb-8 border border-sky-400/30">
+                    <span class="w-2 h-2 bg-green-400 rounded-full pulse-slow"></span>
+                    <span class="text-sm font-medium text-white">50,000+ Active Subscribers Worldwide</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-3xl md:text-6xl lg:text-5xl font-bold leading-tight mb-6 text-white">
+                    Stream <span class="gradient-text">20,000+ Channels</span><br class="hidden sm:block"> in 4K Quality
+                </h1>
+
+                <p class="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    Premium IPTV with unlimited movies, sports, and entertainment. No contracts. No buffering. Just pure
+                    quality streaming.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="https://wa.me/1234567890?text=Hi,%20I%20want%20to%20subscribe%20to%20GerTV" target="_blank"
+                        class="btn-primary px-10 py-4 rounded-xl text-white font-bold text-lg flex items-center justify-center space-x-2 shadow-2xl">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <span>Order Now on WhatsApp</span>
+                    </a>
+                    <a href="pricing.html"
+                        class="px-10 py-4 rounded-xl text-white font-bold text-lg border-2 border-white/40 hover:bg-white/10 transition flex items-center justify-center space-x-2 backdrop-blur-sm">
+                        <i class="fas fa-tags"></i>
+                        <span>View Pricing</span>
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-8 mb-12">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-shield-alt text-sky-400 text-xl"></i>
+                        <span class="text-sm sm:text-base text-white font-medium">Secure Payment</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-clock text-sky-400 text-xl"></i>
+                        <span class="text-sm sm:text-base text-white font-medium">99.9% Uptime</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-headset text-sky-400 text-xl"></i>
+                        <span class="text-sm sm:text-base text-white font-medium">24/7 Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <section class="py-24 bg-slate-950 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- 1. SPORTS: CHAMPIONS LEAGUE (Horizontal Auto-Scroll) -->
+            <div class="mb-24">
+                <div class="flex items-center justify-between mb-10">
+                    <div>
+                        <h3 class="text-3xl md:text-4xl font-black uppercase tracking-tighter">Champions <span
+                                class="text-sky-400">League Live</span></h3>
+                        <p class="text-slate-400">Don't miss the biggest matches in European football.</p>
+                    </div>
+                </div>
+
+                <div class="swiper sportsSwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/premier-league_.png" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">Premier League</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/laliga.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">La Liga Live</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/bundesliga.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">Bundesliga</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/seriea-italia.webp" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">Serie A</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/worldcup.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">World Cup</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/LIGUE1.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">Ligue 1</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/facup.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">FA Cup</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/europe-league.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">Europa League</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/conference.webp" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">Conference League</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/Asian-Cup-Logo.png" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">Asian Cup</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[16/9] rounded-[2rem] overflow-hidden border border-white/10">
+                                <img src="assets/mlscup.png" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold">MLS Live</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. MOVIES & SERIES: TOP 12 TRENDING (Numbered Design) -->
+            <div class="mb-24">
+                <div class="flex flex-col mb-12 text-center">
+                    <h3 class="text-3xl md:text-5xl font-black uppercase tracking-tighter">Stream <span
+                            class="text-sky-400">60K+ Movies</span> & Series</h3>
+                    <p class="text-slate-400 mt-2">The most popular trending titles updated daily.</p>
+                </div>
+
+                <div class="swiper movieSwiper">
+                    <div class="swiper-wrapper">
+                        <!-- 12 Numbered Movie Slides -->
+                        <div class="swiper-slide flex items-center pt-20">
+                            <span
+                                class="absolute left-0 text-[10rem] font-black text-white/10 leading-none -z-10 select-none">1</span>
+                            <div
+                                class="relative w-full aspect-[2/3] rounded-[2rem] overflow-hidden border border-white/10 ml-10 shadow-2xl">
+                                <img src="assets/mivies&series/interstellar.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold uppercase tracking-widest">Interstellar</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide flex items-center pt-20">
+                            <span
+                                class="absolute left-0 text-[10rem] font-black text-white/10 leading-none -z-10 select-none">2</span>
+                            <div
+                                class="relative w-full aspect-[2/3] rounded-[2rem] overflow-hidden border border-white/10 ml-10 shadow-2xl">
+                                <img src="assets/mivies&series/got.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold uppercase tracking-widest">Game Of throanes</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex items-center pt-20">
+                            <span
+                                class="absolute left-0 text-[10rem] font-black text-white/10 leading-none -z-10 select-none">3</span>
+                            <div
+                                class="relative w-full aspect-[2/3] rounded-[2rem] overflow-hidden border border-white/10 ml-10 shadow-2xl">
+                                <img src="assets/mivies&series/fightclub.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold uppercase tracking-widest">Fight Club</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add slides 4 through 12 here -->
+                        <div class="swiper-slide flex items-center pt-20">
+                            <span
+                                class="absolute left-0 text-[10rem] font-black text-white/10 leading-none -z-10 select-none">4</span>
+                            <div
+                                class="relative w-full aspect-[2/3] rounded-[2rem] overflow-hidden border border-white/10 ml-10 shadow-2xl">
+                                <img src="assets/mivies&series/breakingbad.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold uppercase tracking-widest">Breaking Bad</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex items-center pt-20">
+                            <span
+                                class="absolute left-0 text-[10rem] font-black text-white/10 leading-none -z-10 select-none">5</span>
+                            <div
+                                class="relative w-full aspect-[2/3] rounded-[2rem] overflow-hidden border border-white/10 ml-10 shadow-2xl">
+                                <img src="assets/mivies&series/lacasa.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold uppercase tracking-widest">Lacasa De Papel</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flex items-center pt-20">
+                            <span
+                                class="absolute left-0 text-[10rem] font-black text-white/10 leading-none -z-10 select-none">5</span>
+                            <div
+                                class="relative w-full aspect-[2/3] rounded-[2rem] overflow-hidden border border-white/10 ml-10 shadow-2xl">
+                                <img src="assets/mivies&series/fury.jpg" class="w-full h-full object-cover">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent">
+                                </div>
+                                <div class="absolute bottom-6 left-6">
+                                    <h4 class="font-bold uppercase tracking-widest">Fury</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. DOCUMENTARIES (Horizontal Auto-Scroll) -->
+            <div>
+                <div class="flex items-center justify-between mb-10">
+                    <h3 class="text-3xl font-bold uppercase tracking-widest">Top <span class="text-sky-400">HD
+                            Documentaries</span></h3>
+                </div>
+
+                <div class="swiper docuSwiper">
+                    <div class="swiper-wrapper">
+                        <!-- 12 Documentary Slides -->
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/5">
+                                <img src="assets/documentaires/13th.jpg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <!-- Repeat 11 more times -->
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/5"><img
+                                    src="assets/documentaires/Hoop Dreams.jpeg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/5"><img
+                                    src="assets/documentaires/Man on Wire.webp" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/5"><img
+                                    src="assets/documentaires/Paris Is Burnin.jpg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/5"><img
+                                    src="assets/documentaires/Shoah.jpg" class="w-full h-full object-cover"></div>
+                        </div>
+                        <div class="swiper-slide group">
+                            <div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-white/5"><img
+                                    src="assets/documentaires/thectofkilling.jpg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Swiper JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Configuration for Carousels
+        const swiperOptions = {
+            loop: true, // Makes it infinite
+            grabCursor: true, // Mouse looks like a hand
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false, // Keeps sliding even after you touch it
+            },
+            breakpoints: {
+                // Mobile: show 1.5 cards
+                320: { slidesPerView: 1.5, spaceBetween: 20 },
+                // Tablet: show 3 cards
+                768: { slidesPerView: 3.2, spaceBetween: 30 },
+                // Desktop: show 5 cards
+                1024: { slidesPerView: 4.8, spaceBetween: 40 }
+            }
+        };
+
+        // Initialize all 3
+        new Swiper('.sportsSwiper', swiperOptions);
+        new Swiper('.movieSwiper', swiperOptions);
+        new Swiper('.docuSwiper', swiperOptions);
+    </script>
+
+    <style>
+        /* Styling to make it look exactly like a TV App */
+        .swiper {
+            width: 100%;
+            height: 100%;
+            overflow: visible !important;
+        }
+
+        .swiper-slide {
+            transition: transform 0.3s ease;
+        }
+
+        .swiper-slide:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+    </style>
+    <!-- Supported Devices Section -->
+    <section class="py-20 bg-slate-950 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto text-center">
+
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-4xl font-black text-white mb-6 tracking-tight">
+                Stream Your Favourite Shows on <span class="text-sky-400">All of Your Devices</span>
+            </h2>
+
+            <!-- Description -->
+            <p class="text-slate-400 text-sm md:text-base leading-relaxed max-w-5xl mx-auto mb-16">
+                Stream anything on the move from a huge variety of devices with our <span
+                    class="text-white font-bold">IPTV provider</span>, smartphones, tablets, smart TVs, and laptops, not
+                to mention Firesticks and Android boxes. Whatever your locale may be, be it home or the workplace, our
+                services will let you watch your favorite shows and movies without stutter.
+            </p>
+
+            <!-- Device Icons Row -->
+            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+
+                <!-- Roku -->
+                <div class="group flex flex-col items-center gap-3">
+                    <div
+                        class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-sky-500 flex items-center justify-center shadow-[0_0_20px_rgba(56,189,248,0.2)] group-hover:scale-110 group-hover:shadow-[0_0_30px_rgba(56,189,248,0.4)] transition-all duration-300">
+                        <span class="text-white font-black text-lg md:text-xl tracking-tighter italic">Roku</span>
+                    </div>
+                </div>
+
+                <!-- Samsung -->
+                <div class="group flex flex-col items-center gap-3">
+                    <div
+                        class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-sky-500 flex items-center justify-center shadow-[0_0_20px_rgba(56,189,248,0.2)] group-hover:scale-110 transition-all duration-300">
+                        <span
+                            class="text-white font-black text-[10px] md:text-xs tracking-widest uppercase">Samsung</span>
+                    </div>
+                </div>
+
+                <!-- PlayStation -->
+                <div class="group flex flex-col items-center gap-3">
+                    <div
+                        class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-sky-500 flex items-center justify-center shadow-[0_0_20px_rgba(56,189,248,0.2)] group-hover:scale-110 transition-all duration-300">
+                        <div class="text-white flex flex-col items-center leading-none">
+                            <i class="fab fa-playstation text-xl md:text-2xl mb-1"></i>
+                            <span class="text-[8px] md:text-[10px] font-bold">PS5 | PS4</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Xbox -->
+                <div class="group flex flex-col items-center gap-3">
+                    <div
+                        class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-sky-500 flex items-center justify-center shadow-[0_0_20px_rgba(56,189,248,0.2)] group-hover:scale-110 transition-all duration-300">
+                        <div class="text-white flex flex-col items-center leading-none">
+                            <i class="fab fa-xbox text-xl md:text-2xl mb-1"></i>
+                            <span class="text-[10px] md:text-xs font-black italic">XBOX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Apple TV -->
+                <div class="group flex flex-col items-center gap-3">
+                    <div
+                        class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-sky-500 flex items-center justify-center shadow-[0_0_20px_rgba(56,189,248,0.2)] group-hover:scale-110 transition-all duration-300">
+                        <div class="text-white flex items-center gap-1">
+                            <i class="fab fa-apple text-2xl md:text-3xl"></i>
+                            <span class="text-lg md:text-xl font-bold lowercase">tv</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vizio -->
+                <div class="group flex flex-col items-center gap-3">
+                    <div
+                        class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-sky-500 flex items-center justify-center shadow-[0_0_20px_rgba(56,189,248,0.2)] group-hover:scale-110 transition-all duration-300">
+                        <span class="text-white font-black text-lg md:text-xl italic tracking-tighter">VIZIO</span>
+                    </div>
+                </div>
+
+                <!-- LG -->
+                <div class="group flex flex-col items-center gap-3">
+                    <div
+                        class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-sky-500 flex items-center justify-center shadow-[0_0_20px_rgba(56,189,248,0.2)] group-hover:scale-110 transition-all duration-300">
+                        <div class="flex flex-col items-center">
+                            <span class="text-white font-black text-2xl md:text-3xl leading-none">LG</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Pricing / Billing Section -->
+<section id="pricing" class="py-24 bg-slate-950 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-sky-400 font-bold tracking-widest uppercase text-sm mb-3">Pricing Plans</h2>
+            <h3 class="text-4xl md:text-6xl font-black text-white mb-6">
+                Choose Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500">Premium Pass</span>
+            </h3>
+            <p class="text-slate-400 max-w-2xl mx-auto text-lg">
+                Unlock 20,000+ channels and 60,000+ VODs instantly. No hidden fees, cancel anytime.
+            </p>
+        </div>
+
+        <!-- Pricing Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+            
+            <!-- 1 Month Plan -->
+            <div class="group relative p-8 rounded-[2.5rem] bg-white/5 border border-white/10 hover:border-sky-400/50 transition-all duration-500 flex flex-col">
+                <div class="mb-8">
+                    <h4 class="text-white font-bold text-xl mb-2">Basic Access</h4>
+                    <span class="text-sky-400 font-bold text-sm uppercase tracking-widest">1 Month</span>
+                </div>
+                <div class="mb-8">
+                    <span class="text-5xl font-black text-white">25€</span>
+                    <span class="text-slate-500 ml-1">/ month</span>
+                </div>
+                
+                <ul class="space-y-4 mb-10 flex-grow text-slate-300 text-sm">
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-sky-400"></i> 20,000+ Live Channels</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-sky-400"></i> 60,000+ Movies & Series</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-sky-400"></i> 4K / Ultra HD Quality</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-sky-400"></i> Anti-Freeze System</li>
+                </ul>
+
+                <a href="https://wa.me/YOUR_NUMBER?text=I%20want%20the%201%20Month%20Plan" 
+                   class="w-full py-4 rounded-2xl bg-white/10 text-white font-bold text-center hover:bg-white hover:text-slate-950 transition-all duration-300">
+                    Order Now
+                </a>
+            </div>
+
+            <!-- 3 Months Plan -->
+            <div class="group relative p-8 rounded-[2.5rem] bg-white/5 border border-white/10 hover:border-sky-400/50 transition-all duration-500 flex flex-col">
+                <div class="mb-8">
+                    <h4 class="text-white font-bold text-xl mb-2">Standard Pack</h4>
+                    <span class="text-sky-400 font-bold text-sm uppercase tracking-widest">3 Months</span>
+                </div>
+                <div class="mb-8">
+                    <span class="text-5xl font-black text-white">35€</span>
+                    <span class="text-slate-500 ml-1">/ 3 months</span>
+                </div>
+                
+                <ul class="space-y-4 mb-10 flex-grow text-slate-300 text-sm">
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-sky-400"></i> 20,000+ Live Channels</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-sky-400"></i> 60,000+ Movies & Series</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-sky-400"></i> 4K / Ultra HD Quality</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-sky-400"></i> 24/7 Premium Support</li>
+                </ul>
+
+                <a href="https://wa.me/YOUR_NUMBER?text=I%20want%20the%203%20Months%20Plan" 
+                   class="w-full py-4 rounded-2xl bg-white/10 text-white font-bold text-center hover:bg-white hover:text-slate-950 transition-all duration-300">
+                    Order Now
+                </a>
+            </div>
+
+            <!-- 6 Months Plan -->
+            <div class="group relative p-8 rounded-[2.5rem] bg-white/5 border border-white/10 hover:border-sky-400/50 transition-all duration-500 flex flex-col">
+                <div class="mb-8">
+                    <h4 class="text-white font-bold text-xl mb-2">Popular Choice</h4>
+                    <span class="text-sky-400 font-bold text-sm uppercase tracking-widest">6 Months</span>
+                </div>
+                <div class="mb-8">
+                    <span class="text-5xl font-black text-white">45€</span>
+                    <span class="text-slate-500 ml-1">/ 6 months</span>
+                </div>
+                
+                <ul class="space-y-4 mb-10 flex-grow text-slate-300 text-sm">
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-sky-400"></i> 20,000+ Live Channels</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-sky-400"></i> All Premium VODs</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-sky-400"></i> Multi-Device Support</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-sky-400"></i> Priority Activation</li>
+                </ul>
+
+                <a href="https://wa.me/YOUR_NUMBER?text=I%20want%20the%206%20Months%20Plan" 
+                   class="w-full py-4 rounded-2xl bg-white/10 text-white font-bold text-center hover:bg-white hover:text-slate-950 transition-all duration-300">
+                    Order Now
+                </a>
+            </div>
+
+            <!-- 12 Months Plan (BEST VALUE - HIGHLIGHTED) -->
+            <div class="group relative p-8 rounded-[2.5rem] bg-gradient-to-b from-sky-500/20 to-slate-950 border-2 border-sky-400 shadow-[0_0_40px_rgba(56,189,248,0.15)] transform md:-translate-y-4 flex flex-col scale-105 z-10">
+                <!-- Best Value Badge -->
+                <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-sky-400 text-slate-950 font-black text-xs px-6 py-2 rounded-full uppercase tracking-tighter">
+                    Best Value
+                </div>
+
+                <div class="mb-8">
+                    <h4 class="text-white font-bold text-xl mb-2">Elite Membership</h4>
+                    <span class="text-sky-400 font-bold text-sm uppercase tracking-widest">12 Months</span>
+                </div>
+                <div class="mb-8">
+                    <span class="text-6xl font-black text-white">75€</span>
+                    <span class="text-slate-500 ml-1">/ year</span>
+                </div>
+                
+                <ul class="space-y-4 mb-10 flex-grow text-slate-200 text-sm">
+                    <li class="flex items-center gap-3"><i class="fas fa-star text-sky-400"></i> Everything in Standard</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-star text-sky-400"></i> 2 Concurrent Connections</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-star text-sky-400"></i> EPG Guide Included</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-star text-sky-400"></i> Catch-up (Recordings)</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-star text-sky-400"></i> VIP 24/7 WhatsApp Tech</li>
+                </ul>
+
+                <a href="https://wa.me/YOUR_NUMBER?text=I%20want%20the%2012%20Months%20Elite%20Plan" 
+                   class="group/btn relative w-full py-5 rounded-2xl bg-white text-slate-950 font-black text-lg text-center shadow-xl hover:bg-sky-400 hover:text-white transition-all duration-300 overflow-hidden">
+                    <span class="relative z-10">ORDER ANNUAL PLAN</span>
+                </a>
+            </div>
+        </div>
+
+        <p class="mt-16 text-center text-slate-500 text-sm">
+            <i class="fas fa-shield-halved text-sky-400 mr-2"></i> 
+            Secure payment & instant delivery. Not satisfied? 7-day money back guarantee.
+        </p>
+    </div>
+</section>
+    <section class="py-24 bg-slate-950 overflow-hidden" id="features">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="text-sky-400 font-bold tracking-widest uppercase text-sm mb-3">The Premium Standard</h2>
+                    <h3 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+                        Why settle for less when you can <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">have it
+                            all?</span>
+                    </h3>
+                </div>
+                <p class="text-slate-400 text-lg max-w-sm">
+                    We've invested in elite server infrastructure to ensure your entertainment is never interrupted.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[280px] md:auto-rows-[320px]">
+
+                <div class="md:col-span-8 relative group overflow-hidden rounded-[2.5rem] border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1504450758481-7338eba7524a?auto=format&fit=crop&q=80&w=1200"
+                        class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                        alt="Live Sports">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+
+                    <div class="absolute bottom-0 left-0 p-8 md:p-12">
+                        <div
+                            class="inline-flex items-center gap-2 bg-sky-500 text-white px-3 py-1 rounded-full text-xs font-bold mb-4 uppercase tracking-tighter">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                            </span>
+                            Live Now
+                        </div>
+                        <h4 class="text-3xl md:text-4xl font-bold text-white mb-2">20,000+ Global Channels</h4>
+                        <p class="text-slate-300 max-w-md">Stream every major sports league, international news, and
+                            premium cable networks in real-time.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="md:col-span-4 relative group overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=800"
+                        class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition duration-700"
+                        alt="4K Visuals">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent"></div>
+
+                    <div class="absolute inset-0 flex flex-col justify-end p-8">
+                        <i class="fas fa-compact-disc text-sky-400 text-3xl mb-4"></i>
+                        <h4 class="text-2xl font-bold text-white mb-2">Ultra HD 4K</h4>
+                        <p class="text-slate-300 text-sm">Crystal clear 60FPS streaming that makes you feel like you're
+                            in the stadium.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="md:col-span-4 relative group overflow-hidden rounded-[2.5rem] border border-white/10 bg-slate-900">
+                    <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=80&w=800"
+                        class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition duration-700"
+                        alt="Devices">
+
+                    <div class="absolute inset-0 flex flex-col justify-end p-8">
+                        <i class="fas fa-mobile-screen-button text-sky-400 text-3xl mb-4"></i>
+                        <h4 class="text-2xl font-bold text-white mb-2">Any Device</h4>
+                        <p class="text-slate-300 text-sm">From your 85" Smart TV to your smartphone on the train.</p>
+                    </div>
+                </div>
+
+                <div class="md:col-span-8 relative group overflow-hidden rounded-[2.5rem] border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=1200"
+                        class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
+                        alt="Movies">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+
+                    <div class="absolute bottom-0 left-0 p-8 md:p-12">
+                        <h4 class="text-3xl md:text-4xl font-bold text-white mb-2">80,000+ VOD Library</h4>
+                        <p class="text-slate-300 max-w-md">Every movie, every series, every season. Updated daily with
+                            the latest Hollywood blockbusters.</p>
+                        <div class="flex gap-4 mt-6">
+                            <span class="text-white/60 text-xs px-3 py-1 bg-white/10 rounded-full">Netflix</span>
+                            <span class="text-white/60 text-xs px-3 py-1 bg-white/10 rounded-full">HBO Max</span>
+                            <span class="text-white/60 text-xs px-3 py-1 bg-white/10 rounded-full">Disney+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 py-12 border-y border-white/10">
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-extrabold text-white mb-2">99.9%</div>
+                    <div class="text-sky-400 font-bold uppercase text-xs tracking-widest">Server Uptime</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-extrabold text-white mb-2">24/7</div>
+                    <div class="text-sky-400 font-bold uppercase text-xs tracking-widest">Live Support</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-extrabold text-white mb-2">15M</div>
+                    <div class="text-sky-400 font-bold uppercase text-xs tracking-widest">VOD Minutes</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-extrabold text-white mb-2">0</div>
+                    <div class="text-sky-400 font-bold uppercase text-xs tracking-widest">Buffering Issues</div>
+                </div>
+            </div>
+
+            <div
+                class="mt-24 relative overflow-hidden rounded-[3rem] min-h-[500px] flex items-center justify-center shadow-2xl shadow-sky-500/20">
+
+                <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?q=80&w=2070&auto=format&fit=crop"
+                    alt="Premium Streaming Experience" class="absolute inset-0 w-full h-full object-cover">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-900/40"></div>
+                <div class="absolute -top-24 -right-24 w-96 h-96 bg-sky-500/20 rounded-full blur-[100px]"></div>
+                <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px]"></div>
+
+                <div class="relative z-10 px-8 py-16 md:px-20 md:py-24 text-center">
+
+                    <div
+                        class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full mb-8">
+                        <span class="flex h-2 w-2 rounded-full bg-green-400"></span>
+                        <span class="text-white text-xs font-bold uppercase tracking-widest">Instant Activation
+                            Available</span>
+                    </div>
+
+                    <h4 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight tracking-tight">
+                        Stop paying for 10 different <br class="hidden md:block">
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-400">subscriptions.</span>
+                    </h4>
+
+                    <p class="text-slate-300 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+                        Join <span class="text-white font-bold">15,000+ happy viewers</span> who saved an average of
+                        <span class="text-sky-400 font-bold">$1,200/year</span> by switching to our all-in-one premium
+                        service.
+                    </p>
+
+                    <div class="flex flex-col items-center gap-6">
+                        <a href="https://wa.me/212713440903"
+                            class="group relative inline-flex items-center gap-4 bg-white text-slate-950 px-12 py-6 rounded-2xl font-black text-xl shadow-[0_0_40px_rgba(56,189,248,0.3)] hover:scale-105 hover:bg-gradient-to-r hover:from-sky-400 hover:to-blue-400 hover:text-black transition-all duration-300">
+                            <i
+                                class="fab fa-whatsapp text-2xl text-green-500 group-hover:text-white transition-colors duration-300"></i>
+
+                            Order Now
+
+                            <i
+                                class="fas fa-chevron-right text-sm group-hover:translate-x-1 group-hover:text-white transition-all duration-300"></i>
+                        </a>
+
+                        <div
+                            class="flex flex-wrap items-center justify-center gap-6 text-slate-400 text-sm font-medium">
+                            <span class="flex items-center gap-2">
+                                <i class="fas fa-shield-check text-sky-400"></i> 7-Day Money Back Guarantee
+                            </span>
+                            <span class="hidden md:block w-1.5 h-1.5 bg-slate-700 rounded-full"></span>
+                            <span class="flex items-center gap-2">
+                                <i class="fas fa-bolt text-sky-400"></i> Setup in 5 Minutes
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 rounded-lg flex items-center justify-center">
+                            <img class="rounded-full" src=" assets/logo.png" alt="">
+                        </div>
+                        <span class="text-2xl font-bold">Ger<span class="text-sky-400">TV</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Your premium IPTV provider with 20,000+ channels and 80,000+ VOD content in stunning 4K quality.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-sky-400 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-sky-400 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-sky-400 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-sky-400 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-sky-400 transition">Home</a></li>
+                        <li><a href="features.html" class="text-gray-400 hover:text-sky-400 transition">Features</a>
+                        </li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-sky-400 transition">Pricing</a></li>
+                        <li><a href="channels.html" class="text-gray-400 hover:text-sky-400 transition">Channels</a>
+                        </li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-sky-400 transition">FAQ</a></li>
+                    </ul>
+                </div>
+
+
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-envelope text-sky-400 mt-1"></i>
+                            <span class="text-gray-400"><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                                    data-cfemail="12616762627d6066526260777f7b677f66643c717d7f">zakaria-gerTV@gmail.com</a></span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fab fa-whatsapp text-sky-400 mt-1"></i>
+                            <span class="text-gray-400">+2127-1344-0903</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fas fa-comments text-sky-400 mt-1"></i>
+                            <span class="text-gray-400">24/7 Live Chat Available</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2026 GerTV. All rights reserved. Premium IPTV Service Provider.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        const navbar = document.getElementById('navbar');
+        const navContainer = document.getElementById('nav-container');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeDrawerBtn = document.getElementById('close-drawer');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+                navContainer.classList.add('bg-slate-950/80', 'backdrop-blur-xl', 'border-white/10', 'shadow-2xl');
+                navContainer.classList.remove('border-white/5');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
+                navContainer.classList.remove('bg-slate-950/80', 'backdrop-blur-xl', 'border-white/10', 'shadow-2xl');
+                navContainer.classList.add('border-white/5');
+            }
+        });
+
+        const openMenu = () => {
+            mobileDrawer.classList.remove('invisible', 'opacity-0');
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeMenu = () => {
+            mobileDrawer.classList.add('invisible', 'opacity-0');
+            document.body.style.overflow = 'auto';
+        };
+
+        mobileMenuBtn.addEventListener('click', openMenu);
+        closeDrawerBtn.addEventListener('click', closeMenu);
+
+        const drawerLinks = mobileDrawer.querySelectorAll('a');
+        drawerLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>
