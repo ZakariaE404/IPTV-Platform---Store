@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium IPTV - Unlimited 4K Streaming | 20,000+ Channels</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/title-logo.png?v=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Pricing</title>
+</head>
+
+<body>
+
+    <nav id="navbar" class="fixed w-full z-[100] transition-all duration-500 py-4 px-4 sm:px-6">
+        <div id="nav-container"
+            class="max-w-7xl mx-auto transition-all duration-500 rounded-[2rem] border border-white/5 bg-transparent px-6 lg:px-10">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo Area -->
+                <div class="flex items-center group cursor-pointer" onclick="window.location.href='index.html'">
+                    <div class="relative">
+                        <div
+                            class="absolute inset-0 bg-sky-500/30 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                        <div
+                            class="relative w-12 h-12 flex items-center justify-center bg-gradient-to-tr from-slate-900 to-slate-800 rounded-full border border-white/10 shadow-2xl">
+                            <img class="w-8 h-8 object-contain rounded-full" src="assets/title-logo.png"
+                                alt="GerTV Logo">
+                        </div>
+                    </div>
+                    <div class="ml-3 flex flex-col">
+                        <span class="text-2xl font-black text-white tracking-tighter leading-none">GER<span
+                                class="text-sky-400">TV</span></span>
+                        <span
+                            class="text-[10px] text-sky-400/60 font-bold uppercase tracking-[0.2em] leading-none mt-1">Premium
+                            IPTV</span>
+                    </div>
+                </div>
+
+                <div
+                    class="hidden md:flex items-center bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-8 py-2.5 space-x-10">
+                    <a href="index.html"
+                        class="relative text-sm font-bold text-white hover:text-sky-400 transition-colors group">Home
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="features.html"
+                        class="relative text-sm font-bold text-white/70 hover:text-sky-400 transition-colors group">Features
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="pricing.html"
+                        class="relative text-sm font-bold text-white/70 hover:text-sky-400 transition-colors group">Pricing
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="channels.html"
+                        class="relative text-sm font-bold text-white/70 hover:text-sky-400 transition-colors group">Channels
+                        <span
+                            class="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-400 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="faq.html"
+                        class="text-sm font-bold text-white/60 hover:text-white transition-colors">Support</a>
+                    <a href="https://wa.me/212713440903" target="_blank"
+                        class="group relative inline-flex items-center gap-2 bg-white text-slate-950 px-6 py-3 rounded-full font-black text-sm shadow-xl hover:scale-105 hover:bg-sky-400 hover:text-white transition-all duration-300">
+                        <i class="fab fa-whatsapp text-lg text-green-500 group-hover:text-white transition-colors"></i>
+                        <span>ORDER NOW</span>
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn"
+                    class="md:hidden w-12 h-12 flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl text-white hover:bg-white/10 transition-all">
+                    <i class="fas fa-bars-staggered text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-drawer" class="fixed inset-0 z-[110] invisible opacity-0 transition-all duration-500">
+
+        <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-2xl"></div>
+
+        <div class="relative h-full flex flex-col items-center justify-center p-8">
+
+            <button id="close-drawer"
+                class="absolute top-10 right-10 w-12 h-12 flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl text-white">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+
+            <div class="flex flex-col items-center space-y-8 text-center">
+                <a href="index.html" class="text-4xl font-black text-white hover:text-sky-400 transition">HOME</a>
+                <a href="features.html"
+                    class="text-4xl font-black text-white/70 hover:text-sky-400 transition">FEATURES</a>
+                <a href="pricing.html"
+                    class="text-4xl font-black text-white/70 hover:text-sky-400 transition">PRICING</a>
+                <a href="channels.html"
+                    class="text-4xl font-black text-white/70 hover:text-sky-400 transition">CHANNELS</a>
+                <a href="faq.html"
+                    class="text-4xl font-black text-white/70 hover:text-sky-400 transition text-sm">SUPPORT</a>
+
+                <div class="pt-8">
+                    <a href="https://wa.me/212713440903"
+                        class="flex items-center gap-4 bg-sky-400 text-white px-5 py-5 rounded-3xl font-black text-xl shadow-2xl shadow-sky-400/20">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        ORDER VIA WHATSAPP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-menu"
+        class="mobile-menu fixed top-0 right-0 w-full h-full bg-gradient-to-br from-slate-900 to-slate-800 z-40 md:hidden">
+        <div class="flex flex-col p-8 space-y-6 mt-20">
+            <a href="index.html" class="text-white text-xl hover:text-sky-400 transition">Home</a>
+            <a href="pricing.html" class="text-white text-xl hover:text-sky-400 transition">Pricing</a>
+            <a href="channels.html" class="text-white text-xl hover:text-sky-400 transition">Channels</a>
+            <a href="faq.html" class="text-white text-xl hover:text-sky-400 transition">FAQ</a>
+            <div class="pt-6 space-y-4">
+                <a href="pricing.html"
+                    class="block w-full px-6 py-3 text-center border-2 border-sky-400 text-sky-400 rounded-lg font-semibold hover:bg-sky-400 hover:text-white transition">View
+                    Pricing</a>
+                <a href="https://wa.me/1234567890?text=Hi,%20I%20want%20to%20subscribe%20to%20GerTV" target="_blank"
+                    class="flex items-center justify-center space-x-2 w-full btn-primary px-6 py-3 rounded-lg text-white font-semibold">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Order Now</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<main class="bg-slate-950 min-h-screen text-white pt-32 pb-24 overflow-hidden">
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
+        <div class="inline-flex items-center gap-2 bg-sky-400/10 border border-sky-400/20 px-4 py-2 rounded-full mb-6">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-400"></span>
+            </span>
+            <span class="text-sky-400 text-xs font-bold uppercase tracking-widest">Pricing 2026 Official</span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tighter">
+            Choose Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500">Premium
+                Access</span>
+        </h1>
+        <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto">
+            Stop overpaying for cable. Get 20,000+ Channels and 60,000+ VODs on any device with instant setup.
+        </p>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-end">
+
+            <div
+                class="group relative p-8 rounded-[2.5rem] bg-white/5 border border-white/10 hover:border-sky-400/50 transition-all duration-500 flex flex-col h-full">
+                <div class="mb-8">
+                    <h4 class="text-white font-bold text-xl mb-1 uppercase">Starter</h4>
+                    <div class="text-sky-400 font-bold text-xs tracking-widest uppercase">1 Month Access</div>
+                </div>
+                <div class="mb-8">
+                    <span class="text-5xl font-black text-white">25€</span>
+                    <span class="text-slate-500 text-sm">/mo</span>
+                </div>
+                <ul class="space-y-4 mb-10 flex-grow text-slate-300 text-sm">
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-sky-400"></i> All 20,000+ Channels
+                    </li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-sky-400"></i> 4K / UHD / FHD Quality
+                    </li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-sky-400"></i> All Premium Sports
+                    </li>
+                </ul>
+                <a href="https://wa.me/YOUR_NUMBER?text=1Month"
+                    class="group/btn flex items-center justify-center gap-3 w-full py-4 rounded-2xl bg-white/10 text-white font-bold transition-all duration-300 hover:bg-white hover:text-slate-950">
+                    <i class="fas fa-bag-shopping text-sky-400 group-hover/btn:text-slate-950"></i>
+                    ORDER NOW
+                </a>
+            </div>
+
+            <div
+                class="group relative p-8 rounded-[2.5rem] bg-white/5 border border-white/10 hover:border-sky-400/50 transition-all duration-500 flex flex-col h-full">
+                <div class="mb-8">
+                    <h4 class="text-white font-bold text-xl mb-1 uppercase">Standard</h4>
+                    <div class="text-sky-400 font-bold text-xs tracking-widest uppercase">3 Months Access</div>
+                </div>
+                <div class="mb-8">
+                    <span class="text-5xl font-black text-white">35€</span>
+                    <span class="text-slate-500 text-sm">/3mo</span>
+                </div>
+                <ul class="space-y-4 mb-10 flex-grow text-slate-300 text-sm">
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-sky-400"></i> Everything in Starter
+                    </li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-sky-400"></i> Fast Activation</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-sky-400"></i> 24/7 Support Access
+                    </li>
+                </ul>
+                <a href="https://wa.me/YOUR_NUMBER?text=3Months"
+                    class="group/btn flex items-center justify-center gap-3 w-full py-4 rounded-2xl bg-white/10 text-white font-bold transition-all duration-300 hover:bg-white hover:text-slate-950">
+                    <i class="fas fa-bag-shopping text-sky-400 group-hover/btn:text-slate-950"></i>
+                    ORDER NOW
+                </a>
+            </div>
+
+            <div
+                class="group relative p-8 rounded-[2.5rem] bg-white/5 border border-white/10 hover:border-sky-400/50 transition-all duration-500 flex flex-col h-full">
+                <div class="mb-8">
+                    <h4 class="text-white font-bold text-xl mb-1 uppercase">Advantage</h4>
+                    <div class="text-sky-400 font-bold text-xs tracking-widest uppercase">6 Months Access</div>
+                </div>
+                <div class="mb-8">
+                    <span class="text-5xl font-black text-white">45€</span>
+                    <span class="text-slate-500 text-sm">/6mo</span>
+                </div>
+                <ul class="space-y-4 mb-10 flex-grow text-slate-300 text-sm">
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-sky-400"></i> High Priority Servers
+                    </li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-sky-400"></i> No Buffering System
+                    </li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check text-sky-400"></i> Full VOD Library</li>
+                </ul>
+                <a href="https://wa.me/YOUR_NUMBER?text=6Months"
+                    class="group/btn flex items-center justify-center gap-3 w-full py-4 rounded-2xl bg-white/10 text-white font-bold transition-all duration-300 hover:bg-white hover:text-slate-950">
+                    <i class="fas fa-bag-shopping text-sky-400 group-hover/btn:text-slate-950"></i>
+                    ORDER NOW
+                </a>
+            </div>
+
+            <div
+                class="group relative p-8 rounded-[2.5rem] bg-gradient-to-b from-sky-500/20 to-slate-950 border-2 border-sky-400 shadow-[0_0_60px_rgba(56,189,248,0.2)] transform lg:scale-110 lg:-translate-y-6 z-10 flex flex-col h-full">
+                <div
+                    class="absolute -top-5 left-1/2 -translate-x-1/2 bg-sky-400 text-slate-950 font-black text-[10px] px-6 py-2 rounded-full uppercase tracking-widest">
+                    Most Popular</div>
+                <div class="mb-8">
+                    <h4 class="text-white font-bold text-xl mb-1 uppercase">Elite Lifetime</h4>
+                    <div class="text-sky-400 font-bold text-xs tracking-widest uppercase">12 Months Access</div>
+                </div>
+                <div class="mb-8">
+                    <span class="text-7xl font-black text-white">75€</span>
+                    <div class="text-emerald-400 text-xs font-bold mt-2 uppercase tracking-tighter">Save over 225€
+                        Yearly</div>
+                </div>
+                <ul class="space-y-4 mb-10 flex-grow text-slate-200 text-sm font-medium">
+                    <li class="flex items-center gap-3"><i class="fas fa-star text-sky-400"></i> 2 Connections (Watch 2
+                        TVs)</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-star text-sky-400"></i> VIP Anti-Freeze
+                        Technology</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-star text-sky-400"></i> Exclusive VOD Content
+                    </li>
+                    <li class="flex items-center gap-3"><i class="fas fa-star text-sky-400"></i> 24/7 Personal Support
+                    </li>
+                </ul>
+                <a href="https://wa.me/YOUR_NUMBER?text=1YearElite"
+                    class="relative group/elite flex items-center justify-center gap-3 w-full py-6 rounded-2xl bg-white text-slate-950 font-black text-xl shadow-2xl transition-all duration-300 hover:bg-sky-400 hover:text-white overflow-hidden">
+                    <i
+                        class="fas fa-cart-arrow-down group-hover/elite:-translate-y-1 group-hover/elite:scale-110 transition-transform"></i>
+                    <span>ACTIVATE ELITE</span>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/elite:translate-x-full transition-transform duration-1000">
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-40">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+            <div class="flex flex-col items-center md:items-start">
+                <div
+                    class="w-14 h-14 bg-sky-400/10 text-sky-400 flex items-center justify-center rounded-2xl mb-6 border border-sky-400/20 shadow-xl">
+                    <i class="fas fa-bolt-lightning text-2xl"></i>
+                </div>
+                <h4 class="text-white font-bold text-xl mb-4">Instant Setup</h4>
+                <p class="text-slate-500 leading-relaxed">No waiting. Once your order is confirmed, you'll receive your
+                    credentials in under 5 minutes via WhatsApp.</p>
+            </div>
+            <div class="flex flex-col items-center md:items-start">
+                <div
+                    class="w-14 h-14 bg-sky-400/10 text-sky-400 flex items-center justify-center rounded-2xl mb-6 border border-sky-400/20 shadow-xl">
+                    <i class="fas fa-lock text-2xl"></i>
+                </div>
+                <h4 class="text-white font-bold text-xl mb-4">No Contracts</h4>
+                <p class="text-slate-500 leading-relaxed">Pay as you go. We don't hide any terms or automatic renewals.
+                    You own your time and your subscription.</p>
+            </div>
+            <div class="flex flex-col items-center md:items-start">
+                <div
+                    class="w-14 h-14 bg-sky-400/10 text-sky-400 flex items-center justify-center rounded-2xl mb-6 border border-sky-400/20 shadow-xl">
+                    <i class="fas fa-rotate text-2xl"></i>
+                </div>
+                <h4 class="text-white font-bold text-xl mb-4">7-Day Guarantee</h4>
+                <p class="text-slate-500 leading-relaxed">Not happy with the quality? We offer a hassle-free 7-day
+                    money-back guarantee. Zero risk for you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Trust Bar -->
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-32 text-center">
+        <div class="p-10 rounded-[3rem] bg-white/5 border border-white/10 backdrop-blur-md">
+            <h4 class="text-slate-400 font-bold uppercase tracking-widest text-xs mb-8">Secure Payment Methods</h4>
+            <div
+                class="flex flex-wrap justify-center items-center gap-10 opacity-30 hover:opacity-100 transition-opacity duration-500">
+                <i class="fab fa-cc-visa text-4xl"></i>
+                <i class="fab fa-cc-mastercard text-4xl"></i>
+                <i class="fab fa-cc-paypal text-4xl"></i>
+                <i class="fab fa-bitcoin text-4xl"></i>
+                <i class="fab fa-apple-pay text-4xl"></i>
+                <i class="fab fa-google-pay text-4xl"></i>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+</html>
